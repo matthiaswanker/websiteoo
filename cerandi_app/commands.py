@@ -2,16 +2,21 @@ __author__ = 'Gerhard'
 
 import requests
 import json
+import random
 
-
+######## params ########
+#username:        unique
+######## return ########
+#ID of the new user
+########################
 def create_user(username):
-    email = "christopher.ott@gmx.net"
+    email = "abc"
     post_data = '{"attributes": [{"label": "email","value": "'+ email +'"},{"label": "user name","value": "'+ username +'"}]}'
     response = requests.post('https://sentinel.apimanagement.hana.ondemand.com:443/api/watchlist_service/rest/users',
                          data=post_data,
                          allow_redirects=True,
                          headers={'api_key': 'Jds7JaVbE3alY4cVeEwWu2MRhLxWXKsG'})
-    assert response.status_code < 300
+    assert response.status_code < 300, response.text
     user_link = json.loads(response.text)["data"]["location"]
     return user_link[user_link.find("users")+6:]
 
@@ -42,15 +47,23 @@ def get_stock_facts(stock_id):
 
 ######## params ########
 #ids:    list of Strings
+######## return ########
+#ID of the new watchlist
+########################
 def create_watchlist(user_id, stock_ids):
-    post_data = '{"type": "compose","watchlist_name": "reference compose","preferences": ' \
+    post_data = '{"type": "compose","watchlist_name": '+ user_id +',"preferences": ' \
                 '{' \
                     '"exchange_id": "1",' \
                     '"transaction_cost": 0.25,' \
                     '"selection_metric": "returns",' \
-                    '"strategy_type": "single",' \
-                    '"backtesting_duration_in_months": 6,' \
-                    '"is_managed": false, ' \
+                    '"strategy_type": "all",' \
+                    '"backtesting_duration_in_months": 2,' \
+                    '"is_managed": true, ' \
+                    '"time_slice": "month", ' \
+                    '"time_slices_per_period": 3, ' \
+                    '"historical_periods": 3, ' \
+                    '"lower_bound": 0.0, ' \
+                    '"upper_bound": 1.0, ' \
                     '"stocks": ' + str(stock_ids) + \
                     '}' \
                 '}'
@@ -58,22 +71,31 @@ def create_watchlist(user_id, stock_ids):
                              data=post_data,
                              allow_redirects=True,
                              headers={'api_key': 'Jds7JaVbE3alY4cVeEwWu2MRhLxWXKsG'})
+    assert response.status_code < 300
     response_json = json.loads(response.text)
-    print response_json
-    watchlist_id = 5 #TODO: response_json["some_label"]
+    watchlist_url = response_json["data"]["location"]
+    index = watchlist_url.find("rest/watchlists")+16
+    watchlist_id=watchlist_url[index:]
     return watchlist_id
 
 
+def optimize_watchlist(watchlist_id):
+    response = requests.get('https://sentinel.apimanagement.hana.ondemand.com:443/api/po_service/rest/historical?watchlist='+ watchlist_id +'&end_date=today&context=true',
+                             allow_redirects=True,
+                             headers={'api_key': 'Jds7JaVbE3alY4cVeEwWu2MRhLxWXKsG'})
+    assert response.status_code < 300
+    response_json = json.loads(response.text)
+    allocations = [(x["stock_id"],x["daily_details"][-1]["allocation"]) for x in response_json["data"]["items"][0]["performance_details"]]
+    #return: all weights and last month's earnings (to be used as estimated earnings for the future)
+    return (allocations, response_json["data"]["items"][0]["last_earnings"])
+
 def main():
-    #a = create_user("a", "b")
-    #b = create_user("c", "b")
-    #c = create_user("ar", "b")
-    #print a
-    #print b
-    #print c
-    user_id = create_user("bla")
-    print user_id
-    create_watchlist(user_id, ["12", "13"])
+    random.seed()
+    user_id = create_user(str(random.randint(0, 1000)))
+    watchlist_id = create_watchlist(user_id, ["3", "4", "1", "37", "2", "5", "27"])
+    print watchlist_id
+    optimize_watchlist(watchlist_id)
+
 
 if __name__ == "__main__":
     main()
