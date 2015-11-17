@@ -19,6 +19,6 @@ from cerandi_app.views import index_page, advisor_page
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$',index_page),
-    url(r'^advisor/',advisor_page)
+    url(r'^$',index_page, name="Index Page" ),
+    url(r'^advisor/',advisor_page, name="Advisor Dashboard")
 ]
