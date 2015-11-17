@@ -26,5 +26,5 @@ $(document).ready(function(){
         $(this).next().removeClass('rotate-left rotate-right').fadeIn(400);
     } */
   });
-
+    
 });
