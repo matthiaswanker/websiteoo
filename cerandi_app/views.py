@@ -43,9 +43,9 @@ def index_page(request):
     '''Render the index page'''
     all_stocks = Stock.objects.all().order_by('-wkn')
     if mobileBrowser(request):
-        t = loader.get_template('swipe.html')
+        t = loader.get_template('landing.html')
     else:
-        t = loader.get_template('swipe.html') # Kehne: IMMER MOBILE ZUM TESTEN!
+        t = loader.get_template('landing.html') # Kehne: IMMER MOBILE ZUM TESTEN!
 
     c = Context( { }) # normally your page data would go here
 
