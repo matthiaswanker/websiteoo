@@ -3,14 +3,14 @@
 
 {% block content %}
 
-    <h1>Login</h1>
+    <h1>More about you </h1>
 
 
 
 
     <form action="{% url 'register_user' %}" method="post">
     {% csrf_token %}
-    <div><input  id="first_name" type="text" name="first_name" placeholder="Your First Name" value="" ></div>
+    <div><input  id="persona_score" type="text" name="persona_score" placeholder="Select Your Persona" value="" ></div>
     <input type="submit" value="Generate">
     </form>
     <!--<div style="padding: 5em;"><a href="/tags">Andere Bist-Du-Nicht Fragen </a></div>-->

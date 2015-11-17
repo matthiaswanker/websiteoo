@@ -15,10 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from cerandi_app.views import index_page, advisor_page
+from cerandi_app import views
+from cerandi_app.views import index_page, advisor_page, register_user,login_form
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$',index_page, name="index_page" ),
-    url(r'^advisor/',advisor_page, name="advisor_page")
+    url(r'^advisor/',advisor_page, name="advisor_page"),
+    url(r'^login_form', views.login_form, name="login_form"),
+    url(r'^register_user/$', views.register_user, name='register_user'),
 ]

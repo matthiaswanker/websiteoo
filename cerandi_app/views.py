@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.shortcuts import redirect
 # Author: Kehne, 17.11 - 12:42
 
 # Some standard Django stuff
@@ -66,3 +67,61 @@ def stock_collection(request):
     all_stocks = Stock.objects.all().order_by('-wkn')
     return render(request, 'swipe.html',{'all_stocks':all_stocks})
 
+def login_form(request):
+    return render(request, 'login_form.html')
+
+def register_user(request):
+    first_name = request.POST['first_name']
+    num_results = Client.objects.filter(first_name = first_name).count()
+
+    if num_results != 0:
+        num_results = num_results+1
+
+    new_Client = Client()
+    #new_Statement.url = url.replace('#','')
+    #new_Statement.count_statement = num_results
+    #new_Statement.statement = request.POST['statement_input']
+    #new_Statement.gender = request.POST['m_or_w']
+    new_Client.save()
+    return redirect('client_detail', url=new_Client.pk,count_statement=new_Client.pk)
+      #p = update_or_create(Statement, pk=question_id)
+      #statement_detail(request,Statement.url)
+      #return HttpResponseRedirect(reverse('Statement:generate_Statement', args=(p.id,)))
+
+def register_user(request):
+    first_name = request.POST['first_name']
+    num_results = Client.objects.filter(first_name = first_name).count()
+
+    if num_results != 0:
+        num_results = num_results+1
+
+    new_Client = Client()
+    new_Client.first_name = first_name
+
+    #new_Statement.count_statement = num_results
+    #new_Statement.statement = request.POST['statement_input']
+    #new_Statement.gender = request.POST['m_or_w']
+    new_Client.save()
+    return redirect('index_page')#, url=new_Client.pk)
+      #p = update_or_create(Statement, pk=question_id)
+      #statement_detail(request,Statement.url)
+      #return HttpResponseRedirect(reverse('Statement:generate_Statement', args=(p.id,)))
+
+def client_detail(request):
+    first_name = request.POST['persona_score']
+    #num_results = Client.objects.filter(first_name = first_name).count()
+
+    #if num_results != 0:
+    #    num_results = num_results+1
+
+    #new_Client = Client()
+    #new_Statement.url = url.replace('#','')
+    #new_Statement.count_statement = num_results
+    #new_Statement.statement = request.POST['statement_input']
+    #new_Statement.gender = request.POST['m_or_w']
+    #new_Client.save()
+    print "NEW persona score has to be saved"
+    return redirect('index_page')#, url=new_Client.pk,count_statement=new_Client.pk)
+      #p = update_or_create(Statement, pk=question_id)
+      #statement_detail(request,Statement.url)
+      #return HttpResponseRedirect(reverse('Statement:generate_Statement', args=(p.id,)))

@@ -5,8 +5,8 @@ from django.core.urlresolvers import reverse
 class Client(models.Model):
     first_name = models.CharField(max_length=255, blank=False)
     watchlist = models.CharField(max_length=255, blank=True)
-    last_name = models.CharField(max_length=255, blank=False)
-    user_name = models.CharField(max_length=255, blank=False)
+    last_name = models.CharField(max_length=255, blank=True)
+    user_name = models.CharField(max_length=255, blank=True)
     moral_ratio = models.IntegerField(default=0)
     risk_ratio = models.IntegerField(default=0)
     plz_location =  models.CharField(max_length=255, blank=True)
@@ -23,8 +23,8 @@ class Client(models.Model):
 #     def get_absolute_url(self):
 #         return reverse('statement_detail', kwargs={'url':self.url})
 #
-#     def __unicode__(self):
-#             return u'%s'  % self.url
+    def __unicode__(self):
+            return u'%s'  % self.first_name 
 #
 #
 class Bank(models.Model):
