@@ -7,13 +7,13 @@ $(document).ready(function(){
         var user_id = document.URL.slice(29, document.URL.length-1);
         //alert(user_id);
       $.get("update/"+$(this).children("div:first").text());
-      $(this).append('<div class="status like">Like!</div>');      
+      $(this).append('<div class="status like">Like!</div>');
       /*if ( $(this).is(':last-child') ) {
         $('.buddy:nth-child(1)').removeClass ('rotate-left rotate-right').fadeIn(300);
        } else {
           $(this).next().removeClass('rotate-left rotate-right').fadeIn(400);
        }*/
-    });  
+    });
 
    $(".buddy").on("swipeleft",function(){
     $(this).addClass('rotate-right').delay(700).fadeOut(1);
@@ -26,5 +26,5 @@ $(document).ready(function(){
         $(this).next().removeClass('rotate-left rotate-right').fadeIn(400);
     } */
   });
-
+    
 });
