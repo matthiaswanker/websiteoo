@@ -4,6 +4,7 @@ from django.shortcuts import render
 # Some standard Django stuff
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.template import Context, loader
+from cerandi_app.models import *;
 
 # list of mobile User Agents
 mobile_uas = [
