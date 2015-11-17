@@ -11,33 +11,20 @@ class Client(models.Model):
     risk_ratio = models.IntegerField(default=0)
     plz_location =  models.CharField(max_length=255, blank=True)
 
-    # did categorize stock a
-    # last acitivity
 
-#     GENDER_TYPES = (("m","m"),("w","w"))
-#     gender		= models.CharField(max_length=200, choices=GENDER_TYPES, default='m')
-#
-#     class Meta:
-#         ordering = ('user_name',)
-#
-#     def get_absolute_url(self):
-#         return reverse('statement_detail', kwargs={'url':self.url})
-#
     def __unicode__(self):
             return u'%s'  % self.first_name
-#
-#
+
+
 class Bank(models.Model):
     bank_name = models.CharField(max_length=255, blank=False)
     description = models.TextField(blank=False)
     logo_url = models.CharField(max_length=255, blank=False)
-#
+
     def __unicode__(self):
         return self.bank_name
-#
-#     class Admin:
-#         pass
-#
+
+
 class Advisor(models.Model):
     first_name = models.CharField(max_length=255, blank=False)
     last_name = models.CharField(max_length=255, blank=False)
@@ -73,17 +60,12 @@ class Stock(models.Model):
 
     def __unicode__(self):
         return self.ticker_name
-#
-#     class Admin:
-#         pass
-#
-#
+
 class Investment(models.Model):
-    client = models.OneToOneField(Client)
-    stock = models.OneToOneField(Stock)
+    client = models.ForeignKey(Client)
+    stock = models.ForeignKey(Stock)
     weight = models.FloatField(default=0.0)
-#
-#
+
 
 class Match(models.Model):
     client = models.OneToOneField(Client)
