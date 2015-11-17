@@ -4,10 +4,16 @@ from django.core.urlresolvers import reverse
 
 class Client(models.Model):
     first_name = models.CharField(max_length=255, blank=False)
+    watchlist = models.CharField(max_length=255, blank=True)
     last_name = models.CharField(max_length=255, blank=False)
     user_name = models.CharField(max_length=255, blank=False)
     moral_ratio = models.IntegerField(default=0)
     risk_ratio = models.IntegerField(default=0)
+    plz_location =  models.CharField(max_length=255, blank=True)
+
+    # did categorize stock a
+    # last acitivity
+
 #     GENDER_TYPES = (("m","m"),("w","w"))
 #     gender		= models.CharField(max_length=200, choices=GENDER_TYPES, default='m')
 #
@@ -37,6 +43,7 @@ class Advisor(models.Model):
     last_name = models.CharField(max_length=255, blank=False)
     user_name = models.CharField(max_length=255, blank=False)
     bank = models.ForeignKey(Bank)
+    plz_location =  models.CharField(max_length=255, blank=True)
 #
     def __unicode__(self):
         return self.user_name
@@ -46,11 +53,19 @@ class Advisor(models.Model):
 #
 #
 class Stock(models.Model):
-    ticker = models.CharField(max_length=255, blank=False)
-    description = models.TextField(blank=False)
-#
-#     def __unicode__(self):
-#         return self.ticker
+    sap_id = models.CharField(max_length=255, blank=True)
+    wkn = models.CharField(max_length=255, blank=True)
+    ticker = models.CharField(max_length=255, blank=True)
+    ticker_name = models.CharField(max_length=255, blank=True)
+    sector_id = models.CharField(max_length=255, blank=True)
+    sector = models.CharField(max_length=255, blank=True)
+    industry = models.CharField(max_length=255, blank=True)
+    index_id = models.CharField(max_length=255, blank=True)
+    index = models.CharField(max_length=255, blank=True)
+    description = models.TextField(blank=True)
+
+    def __unicode__(self):
+        return self.sap_id
 #
 #     class Admin:
 #         pass
@@ -59,5 +74,10 @@ class Stock(models.Model):
 class Investment(models.Model):
     client = models.OneToOneField(Client)
     stock = models.OneToOneField(Stock)
+    weight = models.FloatField(default=0.0)
 #
 #
+
+class Match(models.Model):
+    client = models.OneToOneField(Client)
+    advisor = models.OneToOneField(Advisor)
