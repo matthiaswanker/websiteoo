@@ -37,7 +37,7 @@ def mobileBrowser(request):
     return mobile_browser
 
 
-def index(request):
+def index_page(request):
     '''Render the index page'''
 
     if mobileBrowser(request):
