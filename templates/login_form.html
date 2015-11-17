@@ -3,36 +3,14 @@
 
 {% block content %}
 
-
-<h2>Bist du nicht?</h2>
-
-    {% for sta in all_S %}
-        <a class="button" style="font-size: large;" href="../-/{{ sta.url }}/{{ sta.count_statement }}">{{ sta.url }} </a>
-    {% endfor %}
-
-
-
-
-    <h4 style="padding-top: 3em">Erstelle deinen eigenen Bist-Du-Nicht</h4>
+    <h1>Login</h1>
 
 <!--<a class="button" href="{% url 'yes' statement.gender%}">{{ statement }}</a>-->
 
 
     <form action="{% url 'generate_Statement' %}" method="post">
     {% csrf_token %}
-    <div style="padding-bottom: 1em;"><input  id="url_input" type="text" name="url_input" placeholder="#fragDoch" value="" style="width: 70%;" ></div>
-
-    <div style="padding-bottom: 1em;"><textarea id="statement_input" type="text" name="statement_input" placeholder="Bist du nicht die, die gerne Fragen stellt?" style="height: 4em;width: 70%;"></textarea></div>
-
-        <div style="padding-bottom: 5em;">
-            <label>Wem stellst du diese Frage?</label>
-            <select  name="m_or_w">
-                    <option value="w">Einer Frau</option>
-                    <option value="m">Einem Mann</option>
-                </select>
-
-
-        </div>
+    <div><input  id="first_name" type="text" name="url_input" placeholder="Your First Name" value="" ></div>
     <input style="width: 50%;" type="submit" value="Generate">
 
 
