@@ -53,7 +53,7 @@ class Advisor(models.Model):
 #
 #
 class Stock(models.Model):
-    sap_id = models.CharField(max_length=255, blank=False)
+    sap_id = models.CharField(max_length=255, blank=True)
     wkn = models.CharField(max_length=255, blank=True)
     ticker = models.CharField(max_length=255, blank=True)
     ticker_name = models.CharField(max_length=255, blank=True)
@@ -61,11 +61,11 @@ class Stock(models.Model):
     sector = models.CharField(max_length=255, blank=True)
     industry = models.CharField(max_length=255, blank=True)
     index_id = models.CharField(max_length=255, blank=True)
-    index = models.CharField(max_length=255, blank=True))
-    description = models.TextField(blank=False)
-#
-#     def __unicode__(self):
-#         return self.ticker
+    index = models.CharField(max_length=255, blank=True)
+    description = models.TextField(blank=True)
+
+    def __unicode__(self):
+        return self.sap_id
 #
 #     class Admin:
 #         pass
@@ -74,7 +74,7 @@ class Stock(models.Model):
 class Investment(models.Model):
     client = models.OneToOneField(Client)
     stock = models.OneToOneField(Stock)
-    weigth = models.FloatField(blank=True)
+    weight = models.FloatField(default=0.0)
 #
 #
 
