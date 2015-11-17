@@ -66,6 +66,11 @@ class Investment(models.Model):
     stock = models.ForeignKey(Stock)
     weight = models.FloatField(default=0.0)
 
+class Message(models.Model):
+    description = models.TextField(blank=True)
+    client = models.ForeignKey(Client)
+    advisor = models.ForeignKey(Advisor)
+    author = models.BooleanField() #false: client, true: advisor
 
 class Match(models.Model):
     client = models.OneToOneField(Client)
