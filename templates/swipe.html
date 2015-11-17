@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 {% load staticfiles %}
 
 <!DOCTYPE html>
@@ -19,84 +18,78 @@
     </style>
 </head>
 <body>
-{% for i in all_stocks %}
+
 <div id="top_menu">
-    <p align="center"><img src="{% static "statement/img/logos/logo_symbol.png" %}" alt="Stock" height="20" width="20">
-        PH_{{ i.index }} of 120 <img src="{% static "statement/img/logos/logo_text.png" %}" alt="Cerandi" height="20" width="42">
+    <p align="center"><img src="{% static "statement/img/logos/logo_complete.png" %}" alt="Stock" width="20%">
     </p>
 </div>
-    <div id="container">
+
+<div id="container">
+    {% for stock in all_stocks %}
     <div class="buddy" style="display: block;">
-		<h3>PLACEHOLDER for Company Name</h3>
-		<img id="logo" src="http://static1.squarespace.com/static/5521673ce4b09eb81bf68349/553144f0e4b0672cba8460a1/553144f1e4b0672cba8460a6/1429292300899/gsk-logo.jpg" alt="Logo" height="100" width="100">
-		<table class="line">
-			<tr> <td class="subtitle">Return</td> <td align="middle">9.3% p.a.</td> </tr>
-			<tr> <td class="subtitle">Risk</td>
-			<td>
-				<div class="star-ratings-css">
-				<div class="star-ratings-css-top" style="width: 22%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-				<div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-				</div>
-			</td></tr>
-			<tr> <td class="subtitle">Sustainability</td>
-			<td>
-				<div class="star-ratings-css">
-				<div class="star-ratings-css-top" style="width: 26%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-				<div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-				</div>
-			</td> </tr>
-			<tr> <td class="subtitle">Innovation</td>
-			<td>
-				<div class="star-ratings-css">
-				<div class="star-ratings-css-top" style="width: 89%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-				<div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-				</div>
-			</td> </tr>
-			<tr> <td class="subtitle">Friend Score</td> <td align="middle">6 friends also like this</td> </tr>
-		</table>
-		<p id="description_paragraph">PLACEHOLDER Description Text</p>
-		<img src="35px-X_mark.svg.png" alt="Dislike!" height="42" width="42" align="left">
-		<img src="35px-Yes_check.svg.png" alt="Like!" height="42" width="42" align="right">
+        <h3>{{   stock.ticker_name }}  </h3>
+        <img id="logo"
+             src="{{   stock.logo_url }} "
+             alt="Logo" height="100" width="100">
+        <table class="line">
+            <tr>
+                <td class="subtitle">Return</td>
+                <td align="middle">{{   stock.stock_return }}</td>
+            </tr>
+            <tr>
+                <td class="subtitle">Risk</td>
+                <td>
+                    <div class="star-ratings-css">
+                        <div class="star-ratings-css-top" style="{{   stock.stock_risk }}">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                        <div class="star-ratings-css-bottom">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="subtitle">Sustainability</td>
+                <td>
+                    <div class="star-ratings-css">
+                        <div class="star-ratings-css-top" style="{{   stock.stock_sustainability }}">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                        <div class="star-ratings-css-bottom">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="subtitle">Innovation</td>
+                <td>
+                    <div class="star-ratings-css">
+                        <div class="star-ratings-css-top" style="{{   stock.stock_innovation }}">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                        <div class="star-ratings-css-bottom">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="subtitle">Friend Score</td>
+                <td align="middle">6 friends also like this</td>
+            </tr>
+        </table>
+        <p id="description_paragraph">{{   i.description }}</p>
+        <img src="35px-X_mark.svg.png" alt="Dislike!" height="42" width="42" align="left">
+        <img src="35px-Yes_check.svg.png" alt="Like!" height="42" width="42" align="right">
     </div>
-	<div class="buddy" style="display: block;">
-		<h3>PLACEHOLDER for Company Name</h3>
-		<img id="logo" src="http://logok.org/wp-content/uploads/2014/04/Allianz-logo.png" alt="Logo" height="100" width="100">
-		<table class="line">
-			<tr> <td class="subtitle">Return</td> <td align="middle">5.4% p.a.</td> </tr>
-			<tr> <td class="subtitle">Risk</td>
-			<td>
-				<div class="star-ratings-css">
-				<div class="star-ratings-css-top" style="width: 68%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-				<div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-				</div>
-			</td></tr>
-			<tr> <td class="subtitle">Sustainability</td>
-			<td>
-				<div class="star-ratings-css">
-				<div class="star-ratings-css-top" style="width: 74%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-				<div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-				</div>
-			</td> </tr>
-			<tr> <td class="subtitle">Innovation</td>
-			<td>
-				<div class="star-ratings-css">
-				<div class="star-ratings-css-top" style="width: 32%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-				<div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-				</div>
-			</td> </tr>
-			<tr> <td class="subtitle">Friend Score</td> <td align="middle">6 friends also like this</td> </tr>
-		</table>
-		<p>PLACEHOLDER Description Text</p>
-		<img src="35px-X_mark.svg.png" alt="Dislike!" height="42" width="42" align="left">
-		<img src="35px-Yes_check.svg.png" alt="Like!" height="42" width="42" align="right">
-    </div>
-  </div>
-  <div id="bottom_menu">
-	<img src="{% static "statement/img/bottom_menu/watchlist.png"%}" alt="Watchlist" height="100" width="100" align="middle">
-	<img src="{% static "statement/img/bottom_menu/messages.png"%}" alt="Messages" height="100" width="100" align="middle">
-	<img src="{% static "statement/img/bottom_menu/discover.png"%}" alt="Discover" height="100" width="100" align="middle">
-	<img src="{% static "statement/img/bottom_menu/logout.png"%}" alt="Logout" height="100" width="100" align="middle">
-  </div>
+    {% endfor %}
+</div>
+
+<div id="bottom_menu">
+    <img src="{% static "statement/img/bottom_menu/watchlist.png" %}" alt="Watchlist"  width="20%"
+         align="middle">
+    <img src="{% static "statement/img/bottom_menu/messages.png" %}" alt="Messages" width="20%"
+         align="middle">
+    <img src="{% static "statement/img/bottom_menu/discover.png" %}" alt="Discover"  width="20%"
+         align="middle">
+    <img src="{% static "statement/img/bottom_menu/logout.png" %}" alt="Logout" width="20%" align="middle">
+</div>
 
 </body>
 </html>

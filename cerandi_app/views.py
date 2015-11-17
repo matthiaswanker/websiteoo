@@ -41,7 +41,7 @@ def mobileBrowser(request):
 
 def index_page(request):
     '''Render the index page'''
-
+    all_stocks = Stock.objects.all().order_by('-wkn')
     if mobileBrowser(request):
         t = loader.get_template('swipe.html')
     else:
@@ -49,7 +49,8 @@ def index_page(request):
 
     c = Context( { }) # normally your page data would go here
 
-    return HttpResponse(t.render(c))
+    #return HttpResponse(t.render(c))
+    return render(request, 'swipe.html',{'all_stocks': all_stocks})
 
 def advisor_page(request):
     '''Render the advisor page'''
@@ -63,9 +64,7 @@ def advisor_page(request):
 
     return HttpResponse(t.render(c))
 
-def stock_collection(request):
-    all_stocks = Stock.objects.all().order_by('-wkn')
-    return render(request, 'swipe.html',{'all_stocks': all_stocks})
+
 
 def login_form(request):
     return render(request, 'login_form.html')
