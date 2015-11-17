@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4a4d974-22cb-4d78-8298-b56bb98e7682" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cerandi_app/static/statement/img/slider1.gif" afterPath="$PROJECT_DIR$/cerandi_app/static/statement/img/slider1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cerandi_app/static/statement/img/slider2.gif" afterPath="$PROJECT_DIR$/cerandi_app/static/statement/img/slider2.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cerandi_app/static/statement/img/slider3.gif" afterPath="$PROJECT_DIR$/cerandi_app/static/statement/img/slider3.gif" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/landing.html" afterPath="$PROJECT_DIR$/templates/landing.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/login_form.html" afterPath="$PROJECT_DIR$/templates/login_form.html" />
     </list>
     <list id="7ed6be76-bfa8-4222-aa2a-37bfc1f88678" name="d" comment="" />
@@ -126,8 +121,8 @@
       <file leaf-file-name="login_form.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/login_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20058997">
-              <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.30088496">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -697,7 +692,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447798028167</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Logo Updates">
+      <created>1447798818245</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1447798818245</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -756,7 +757,8 @@
     <MESSAGE value="no reverse tinder" />
     <MESSAGE value="new persona score" />
     <MESSAGE value="landing-update" />
-    <option name="LAST_COMMIT_MESSAGE" value="landing-update" />
+    <MESSAGE value="Logo Updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logo Updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1167,8 +1169,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/login_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20058997">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.30088496">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
           <folding />
         </state>
       </provider>
