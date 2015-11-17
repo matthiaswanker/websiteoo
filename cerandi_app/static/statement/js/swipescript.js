@@ -3,7 +3,8 @@ $(document).ready(function(){
     $(".buddy").on("swiperight",function(){
       $(this).addClass('rotate-left').delay(700).fadeOut(1);
       $('.buddy').find('.status').remove();
-      $.post("update",{"penis":"penis"} ,function(data){
+        alert(document.URL);
+      $.post("update",{"stock_pk":$(this).children("div:first").text(), "user_id":""} ,function(data){
             alert(data);});
       $(this).append('<div class="status like">Like!</div>');      
       if ( $(this).is(':last-child') ) {
