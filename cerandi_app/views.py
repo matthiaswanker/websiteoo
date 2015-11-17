@@ -48,3 +48,15 @@ def index(request):
     c = Context( { }) # normally your page data would go here
 
     return HttpResponse(t.render(c))
+
+def advisor(request):
+    '''Render the advisor page'''
+
+    if mobileBrowser(request):
+        t = loader.get_template('client_list.html')
+    else:
+        t = loader.get_template('client_list.html') # Kehne: IMMER MOBILE ZUM TESTEN!
+
+    c = Context( { }) # normally your page data would go here
+
+    return HttpResponse(t.render(c))
