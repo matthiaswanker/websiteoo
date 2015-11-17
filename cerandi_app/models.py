@@ -44,6 +44,8 @@ class Advisor(models.Model):
     user_name = models.CharField(max_length=255, blank=False)
     bank = models.ForeignKey(Bank)
     plz_location =  models.CharField(max_length=255, blank=True)
+    friend_score = models.CharField(max_length=255, blank=True)
+    past_performance = models.CharField(max_length=255, blank=True)
 #
     def __unicode__(self):
         return self.user_name
@@ -63,9 +65,10 @@ class Stock(models.Model):
     index_id = models.CharField(max_length=255, blank=True)
     index = models.CharField(max_length=255, blank=True)
     description = models.TextField(blank=True)
+    logo_url = models.CharField(max_length=255, blank=True)
 
     def __unicode__(self):
-        return self.sap_id
+        return self.ticker_name
 #
 #     class Admin:
 #         pass

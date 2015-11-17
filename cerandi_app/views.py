@@ -4,6 +4,7 @@ from django.shortcuts import render
 # Some standard Django stuff
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.template import Context, loader
+from cerandi_app.models import *;
 
 # list of mobile User Agents
 mobile_uas = [
@@ -60,3 +61,8 @@ def advisor_page(request):
     c = Context( { }) # normally your page data would go here
 
     return HttpResponse(t.render(c))
+
+def stock_collection(request):
+    all_stocks = Stock.objects.all().order_by('-wkn')
+    return render(request, 'swipe.html',{'all_stocks':all_stocks})
+
