@@ -45,17 +45,7 @@ def tinder(request,client_pk):
     return render(request, 'swipe.html',{'all_stocks': all_stocks})
 
 def index_page(request):
-    '''Render the index page'''
-    all_stocks = Stock.objects.all().order_by('-wkn')
-    if mobileBrowser(request):
-        t = loader.get_template('swipe.html')
-    else:
-        t = loader.get_template('swipe.html') # Kehne: IMMER MOBILE ZUM TESTEN!
-
-    c = Context( { }) # normally your page data would go here
-
-    #return HttpResponse(t.render(c))
-    return render(request, 'swipe.html',{'all_stocks': all_stocks})
+    return render(request, 'landing.html')
 
 def advisor_page(request):
     '''Render the advisor page'''
@@ -92,8 +82,14 @@ def persona_score(request):
     new_Client = Client.objects.get(pk=new_Client)
     new_Client.risk_ratio = request.POST['persona_score']
     new_Client.save()
-    return render(request, 'swipe.html',{'new_Client' : new_Client})
+    #return render(request, 'swipe.html',{'new_Client' : new_Client})
+    return redirect('tinder', client_pk=new_Client.pk)
 
+def update_investment(request):
+    stock_pk = request.POST['stock_pk']
+    client_pk = request.POST['client_pk']
+    print stock_pk+" "+client_pk
+    pass
 # def persona_score(request):#,new_Client_pk):
 #     #print new_Client_pk
 #     #persona_score = request.POST['persona_score']
