@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <h1 align="center">Logout</h1>
+
+
+
+    {% csrf_token %}
+    <div align="center" style="padding:15px">
+    <h4>Thanks for logging out! Hope to see you soon!</h4>
+    </div>
+    <div/>
+    <form action="{% url 'login_form' %}" method="get">
+    <div align="center">
+    <div style="padding:5px"><input type="submit" value="Back to the beginning"></div>
+    </div>
+    </form>
+    <!--<div style="padding: 5em;"><a href="/tags">Andere Bist-Du-Nicht Fragen </a></div>-->
+
+
+{% endblock %}

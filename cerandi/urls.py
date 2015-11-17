@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^$',index_page, name="index_page" ),
     url(r'^advisor/(?P<new_Client_pk>.*)/$',advisor_page, name="advisor_page"),
     url(r'^login_form', views.login_form, name="login_form"),
+    url(r'^logout', views.logout, name="logout"),
     url(r'^persona_score', views.persona_score, name="persona_score"),
     url(r'^register_user/$', views.register_user, name='register_user'),
     #url(r'^client/(?P<new_Client_pk>.*)/$', views.persona_score, name='persona_score'),

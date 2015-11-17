@@ -65,11 +65,13 @@ def advisor_page(request):
 
 def stock_collection(request):
     all_stocks = Stock.objects.all().order_by('-wkn')
-    return render(request, 'swipe.html',{'all_stocks':all_stocks})
+    return render(request, 'swipe.html',{'all_stocks': all_stocks})
 
 def login_form(request):
     return render(request, 'login_form.html')
 
+def logout(request):
+    return render(request, 'logout.html')
 
 def register_user(request):
     first_name = request.POST['first_name']
