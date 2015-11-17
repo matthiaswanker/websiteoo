@@ -21,7 +21,9 @@ from cerandi_app.views import index_page, advisor_page, register_user,login_form
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$',index_page, name="index_page" ),
-    url(r'^advisor/(?P<new_Client_pk>.*)/$',advisor_page, name="advisor_page"),
+    url(r'^client/(?P<client_pk>.*)/$',views.tinder, name="tinder" ),
+    url(r'^client/(?P<client_pk>.*)/update/$',views.update_investment, name="update_investment" ),
+    #url(r'^advisor/(?P<new_Client_pk>.*)/$',advisor_page, name="advisor_page"),
     url(r'^login_form', views.login_form, name="login_form"),
     url(r'^logout', views.logout, name="logout"),
     url(r'^persona_score', views.persona_score, name="persona_score"),

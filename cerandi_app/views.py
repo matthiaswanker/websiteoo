@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.db.models import Q
 from django.shortcuts import redirect
 # Author: Kehne, 17.11 - 12:42
 
@@ -38,19 +39,13 @@ def mobileBrowser(request):
 
     return mobile_browser
 
+def tinder(request,client_pk):
+    stocks_left = Stock.objects.filter(~Q(investment__client__pk=client_pk))
+    all_stocks = stocks_left
+    return render(request, 'swipe.html',{'all_stocks': all_stocks})
 
 def index_page(request):
-    '''Render the index page'''
-    all_stocks = Stock.objects.all().order_by('-wkn')
-    if mobileBrowser(request):
-        t = loader.get_template('landing.html')
-    else:
-        t = loader.get_template('landing.html') # Kehne: IMMER MOBILE ZUM TESTEN!
-
-    c = Context( { }) # normally your page data would go here
-
-    #return HttpResponse(t.render(c))
-    return render(request, 'swipe.html',{'all_stocks': all_stocks})
+    return render(request, 'landing.html')
 
 def advisor_page(request):
     '''Render the advisor page'''
@@ -87,8 +82,14 @@ def persona_score(request):
     new_Client = Client.objects.get(pk=new_Client)
     new_Client.risk_ratio = request.POST['persona_score']
     new_Client.save()
-    return render(request, 'swipe.html',{'new_Client' : new_Client})
+    #return render(request, 'swipe.html',{'new_Client' : new_Client})
+    return redirect('tinder', client_pk=new_Client.pk)
 
+def update_investment(request):
+    stock_pk = request.POST['stock_pk']
+    client_pk = request.POST['client_pk']
+    print stock_pk+" "+client_pk
+    pass
 # def persona_score(request):#,new_Client_pk):
 #     #print new_Client_pk
 #     #persona_score = request.POST['persona_score']
