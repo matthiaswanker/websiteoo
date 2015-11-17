@@ -2,106 +2,38 @@
 {% load staticfiles %}
 {% block content %}
 
-<h5>Profile</h5>
-	<div class="row">
-	<div class="three columns">
-	<img src="{{profile.photo_url}}" alt="{{profile}}"></div>
-	<table class="eight columns">
-		<thead>
-	    	<tr>
-	      		<th>{{profile}}</th>
-	      		<th>{% if profile.senacor_profile %}<img src="{{senacor_logo}}" alt="Senacor" height="20">{% endif %}</th>
-	      	</tr>
-      	</thead>
-      	<tbody>
-	    <tr>
-	    	<td>MAIL</td>
-	    	<td>{{profile.active_email}}</td>
-	    </tr>
-	      <tr>
-	    	<td>XING ID</td>
-	    	<td>{{profile.xing_id}}</td>
-	    </tr>
-	    <tr>
-	    	<td>EMPLOYMENT</td>
-	    	<td>{{profile.employment_status}}</td>
-	    </tr>
-	    <tr>
-	    	<td>GENDER</td>
-	    	<td>{{profile.gender}}</td>
-	    </tr>
-	    <tr>
-	    	<td>#CONTACTS</td>
-	    	<td>{{profile.total_contacts}}</td>
-	    </tr>
-   	    <tr>
-	    	<td>SENACOR_PROFILE</td>
-	    	<td>{{profile.senacor_profile}}</td>
-	    </tr>	    
-	    <tr>
-	    	<td>LINK</td>
-	    	<td><a href={{profile.permalink}}>{{profile.permalink}}</a></td>
-	    </tr>
-		</tbody>
-	</table>
+    <!-- Java Script for search -->
+	<script src="{% static 'senacor/js/jquery-2.1.4.min.js'%}"> </script>
+    <script src="{% static 'senacor/js/ajax_profile_search.js'%}"> </script>
+
+
+    <h1 align="middle">Detailed overview: <b>{{ client.first_name }} {{ client.last_name }}</b></h1>
+
+
+    <!--<div id='loadingmessage' style='display:none'>
+  	LOADING
 	</div>
-	<br>
 
-	<table class="u-full-width">
-		<thead>
-	    	<tr>
-	      		<th>Companies</th>
-	      		<th></th>
-	      	</tr>
-      	</thead>
-      	<tbody>
-      	{% for position in profile.position_set.all %}
-      	{% url 'position_detail' position.id as var_position%}
-		{% url 'company_detail' position.company.id as var_company%}
-		<tr>
-			<td><a href="{{var_position}}">{{position}}</td>
-	    	<td><a href="{{var_company}}">{{position.company}}</td>
-	    	<td>{{position.company.position_set.count}}</td>
-	    </tr>
-		{% endfor %}
-		</tbody>
-	</table>	
-
-
-	<table class="u-full-width">
-		<thead>
-	    	<tr>
-	      		<th>Contacts at Senacor ({{senacor_contacts.count}})</th>
-	      		<th></th>
-	      	</tr>
-      	</thead>
-      	<tbody>
-      	<tr>
-      	{% for profile in senacor_contacts %}
-      	{% url 'profile_detail' profile.id as var_profile%}		
-			<td><img src="{{profile.photo_url}}" alt="{{profile}}" height="40" width="40">
-			<a href="{{var_profile}}">{{profile}}</td>
-			{% if forloop.counter|divisibleby:4 %}
-			<tr></tr>
-		    {% endif %}
-		{% endfor %}
-		<tr>
-		</tbody>
-	</table>	
-	<!-- Use version below -->
-	<!-- <div class="row">
-		<div class="twelf"><h5>Companies contacts working at...</h5></div>
-	</div>
-	<!-- http://stackoverflow.com/questions/13048086/django-template-rows-of-multiple-items -->
-	<!-- <div class="row">
-		{% for company in companies_of_contacts %}
-		<div class="six columns"><a href="/crawler/company/{{company.id}}/">{{company}}</a></div>
-	    {% if forloop.counter|divisibleby:2 %}
-			</div>
-			<div class="row">
-	    {% endif %}
-		{% endfor %}
-	</div>
-	<br> -->
-
+    <br>
+    # Ordered by name
+    <br>-->
+    <table style="width:100%">
+        <tr>
+            <div id="chosen_stocks" align="left">
+                <ul align="middle">
+                <li class="listing">
+                    blubb
+                </li>
+                </ul>
+            </div>
+        </tr>
+        <tr>
+            <div id="chosen_stocks" align="left">
+                <ul align="middle">
+                <li class="listing">
+                    blubb
+                </li>
+                </ul>
+            </div></tr>
+    </table>
 {% endblock %}

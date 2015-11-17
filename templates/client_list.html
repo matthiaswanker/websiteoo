@@ -7,61 +7,24 @@
     <script src="{% static 'senacor/js/ajax_profile_search.js'%}"> </script>
 
 
-    <h5>Profiles</h5>
-    {% csrf_token %}
+    <h1 align="middle">Available clients in your area:</h1>
 
-
-    <!-- Disable form with button -->
-    <!--    <div id="test">
-    </div>
-    <div class="row">
-    <form method="post">
-	{% csrf_token %}
-    {{form}}
-    <input type="submit" value="Submit" />
-    </form>
-    </div> -->
-
-  	<p>Search<br>
-    <input type="text" id="search" name="search"/></p>
     
-    <div id='loadingmessage' style='display:none'>
+    <!--<div id='loadingmessage' style='display:none'>
   	LOADING
 	</div>
 
     <br>
     # Ordered by name
-    <br>
+    <br>-->
 
-    <table class="u-full-width" id="search-results">
-		<thead>
-	    	<tr>
-	      		<th>Profile</th>
-	      		<th>Latest Position</th>
-	      		<th>Latest Company</th>
-	      	</tr>
-      	</thead>
-      	<tbody>
-      	{% for profile in profile_list %}
-      	{% url 'profile_detail' profile.pk as var_profile%}
-		<tr>
-			<td><a href="{{var_profile}}">{{profile}}</td>
-	    	<td>{{profile.position_set.all.0}}</td>
-	    	<td>{{profile.position_set.all.0.company}}</td>
-	    </tr>
-		{% endfor %}
-		</tbody>
-	</table>	
-
-	<!-- http://stackoverflow.com/questions/13048086/django-template-rows-of-multiple-items -->
-<!-- 	<div class="row">
-		{% for profile in profile_list %}
-	    <div class="three columns"><a href="/crawler/profile/{{ profile.id }}/">{{profile}}</a></div>
-	    {% if forloop.counter|divisibleby:4 %}
-			</div>
-			<div class="row">
-	    {% endif %}
-		{% endfor %}
-	</div> -->
-
+    <div id="container" align="middle">
+        <ul>
+        {% for client in all_clients %}
+        <li class="listing">
+            <a href="{% url 'client_detail' advisor_pk=advisor.pk client_pk=client.pk %}">{{ client.last_name }}, {{ client.first_name }}</a>
+        </li>
+        {% endfor %}
+        </ul>
+    </div>
 {% endblock %}
