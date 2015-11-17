@@ -28,7 +28,7 @@
     {% for stock in all_stocks %}
     <div class="buddy" style="display: block;">
         <div style="display:none">{{ stock.pk }}</div>
-        <h3>{{   stock.ticker_name }}  </h3>
+        <h3>{{   stock.ticker_name }}{{   stock.pk}}  </h3>
         <img id="logo"
              src="{{   stock.logo_url }} "
              alt="Logo" height="100" width="100">

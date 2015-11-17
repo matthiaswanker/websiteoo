@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/cerandi_app/static/statement/img/personas/persona1.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/cerandi_app/static/statement/img/personas/persona2.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/cerandi_app/static/statement/img/personas/persona3.png" charset="windows-1252" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
