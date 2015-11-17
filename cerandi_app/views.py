@@ -49,7 +49,7 @@ def index(request):
 
     return HttpResponse(t.render(c))
 
-def advisor(request):
+def advisor_page(request):
     '''Render the advisor page'''
 
     if mobileBrowser(request):
