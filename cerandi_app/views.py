@@ -47,20 +47,6 @@ def tinder(request,client_pk):
 def index_page(request):
     return render(request, 'landing.html')
 
-def advisor_page(request):
-    '''Render the advisor page'''
-
-    if mobileBrowser(request):
-        t = loader.get_template('client_list.html')
-    else:
-        t = loader.get_template('client_list.html') # Kehne: IMMER MOBILE ZUM TESTEN!
-
-    c = Context( { }) # normally your page data would go here
-
-    return HttpResponse(t.render(c))
-
-
-
 def login_form(request):
     return render(request, 'login_form.html')
 
@@ -69,8 +55,10 @@ def logout(request):
 
 def register_user(request):
     first_name = request.POST['first_name']
+    last_name = request.POST["last_name"]
     new_Client = Client()
     new_Client.first_name = first_name
+    new_Client.last_name = last_name
     new_Client.save()
     request.session['new_client'] = new_Client.pk
     return render(request,'persona_score.html',{'new_Client' : new_Client})
@@ -92,6 +80,18 @@ def update_investment(request,client_pk,stock_pk):
     new_investment.client = Client.objects.get(pk = client_pk)
     new_investment.save()
     return render(request, 'login_form.html')
+
+#no plz filtering implemented
+def client_list(request, advisor_pk):
+    all_clients = Client.objects.all()
+    return render(request, 'client_list.html',
+                  {'all_clients': all_clients,
+                   'advisor': Advisor.objects.get(pk=advisor_pk)})
+
+def client_detail(request, advisor_pk, client_pk):
+    return render(request, 'client_detail.html',
+                  {'client': Client.objects.get(pk=client_pk),
+                   'advisor': Advisor.objects.get(pk=advisor_pk)})
 
 # def persona_score(request):#,new_Client_pk):
 #     #print new_Client_pk
