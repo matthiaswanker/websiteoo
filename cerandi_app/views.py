@@ -41,7 +41,7 @@ def mobileBrowser(request):
 
 def index_page(request):
     '''Render the index page'''
-
+    all_stocks = Stock.objects.all().order_by('-wkn')
     if mobileBrowser(request):
         t = loader.get_template('swipe.html')
     else:
@@ -49,7 +49,8 @@ def index_page(request):
 
     c = Context( { }) # normally your page data would go here
 
-    return HttpResponse(t.render(c))
+    #return HttpResponse(t.render(c))
+    return render(request, 'swipe.html',{'all_stocks': all_stocks})
 
 def advisor_page(request):
     '''Render the advisor page'''
@@ -63,9 +64,7 @@ def advisor_page(request):
 
     return HttpResponse(t.render(c))
 
-def stock_collection(request):
-    all_stocks = Stock.objects.all().order_by('-wkn')
-    return render(request, 'swipe.html',{'all_stocks': all_stocks})
+
 
 def login_form(request):
     return render(request, 'login_form.html')
@@ -75,15 +74,20 @@ def logout(request):
 
 def register_user(request):
     first_name = request.POST['first_name']
-    num_results = Client.objects.filter(first_name = first_name).count()
-
     new_Client = Client()
     new_Client.first_name = first_name
     new_Client.save()
-    return redirect('persona_score')
+    print first_name
+    request.session['new_client'] = new_Client.pk
+    return render(request,'persona_score.html',{'new_Client' : new_Client})
 
 def persona_score(request):
-    return render(request, 'persona_score.html')
+    new_Client = request.session.get('new_client', None)
+    print new_Client
+    new_Client = Client.objects.get(pk=new_Client)
+    new_Client.risk_ratio = request.POST['persona_score']
+    new_Client.save()
+    return render(request, 'swipe.html',{'new_Client' : new_Client})
 
 # def persona_score(request):#,new_Client_pk):
 #     #print new_Client_pk
