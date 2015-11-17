@@ -67,10 +67,11 @@ class Investment(models.Model):
     weight = models.FloatField(default=0.0)
 
 class Message(models.Model):
-    description = models.TextField(blank=True)
+    text = models.TextField(blank=True)
     client = models.ForeignKey(Client)
     advisor = models.ForeignKey(Advisor)
     author = models.BooleanField() #false: client, true: advisor
+    send_date = models.DateTimeField()
 
 class Match(models.Model):
     client = models.OneToOneField(Client)
