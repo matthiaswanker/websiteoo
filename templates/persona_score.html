@@ -8,7 +8,7 @@
 
 
 
-    <form action="{% url 'register_user' %}" method="post">
+    <form action="{% url 'persona_score' %}" method="post">
     {% csrf_token %}
     <div><input  id="persona_score" type="text" name="persona_score" placeholder="Select Your Persona" value="" ></div>
     <input type="submit" value="Generate">

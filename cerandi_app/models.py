@@ -24,7 +24,7 @@ class Client(models.Model):
 #         return reverse('statement_detail', kwargs={'url':self.url})
 #
     def __unicode__(self):
-            return u'%s'  % self.first_name 
+            return u'%s'  % self.first_name
 #
 #
 class Bank(models.Model):
