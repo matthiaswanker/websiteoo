@@ -70,6 +70,8 @@ def stock_collection(request):
 def login_form(request):
     return render(request, 'login_form.html')
 
+def logout(request):
+    return render(request, 'logout.html')
 
 def register_user(request):
     first_name = request.POST['first_name']

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <h1 align="center">Logout</h1>
+
+
+
+    {% csrf_token %}
+    <div align="center">
+    <td class="subtitle">Thanks for logging out! Hope to see you soon!</td>
+    </div>
+    <!--<div style="padding: 5em;"><a href="/tags">Andere Bist-Du-Nicht Fragen </a></div>-->
+
+
+{% endblock %}
