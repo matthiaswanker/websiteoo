@@ -7,7 +7,7 @@
 
 
 
-
+<div>Views: {{ new_Client.pk }}</div>
     <form action="{% url 'persona_score' %}" method="post">
     {% csrf_token %}
     <div><input  id="persona_score" type="text" name="persona_score" placeholder="Select Your Persona" value="" ></div>

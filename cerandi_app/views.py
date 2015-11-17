@@ -73,15 +73,20 @@ def login_form(request):
 
 def register_user(request):
     first_name = request.POST['first_name']
-    num_results = Client.objects.filter(first_name = first_name).count()
-
     new_Client = Client()
     new_Client.first_name = first_name
     new_Client.save()
-    return redirect('persona_score')
+    print first_name
+    request.session['new_client'] = new_Client.pk
+    return render(request,'persona_score.html',{'new_Client' : new_Client})
 
 def persona_score(request):
-    return render(request, 'persona_score.html')
+    new_Client = request.session.get('new_client', None)
+    print new_Client
+    new_Client = Client.objects.get(pk=new_Client)
+    new_Client.risk_ratio = request.POST['persona_score']
+    new_Client.save()
+    return render(request, 'swipe.html',{'new_Client' : new_Client})
 
 # def persona_score(request):#,new_Client_pk):
 #     #print new_Client_pk
