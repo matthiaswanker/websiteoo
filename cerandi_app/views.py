@@ -1,3 +1,68 @@
 from django.shortcuts import render
+# Author: Kehne, 17.11 - 12:42
 
-# Create your views here.
+# Some standard Django stuff
+from django.http import HttpResponse, HttpResponseRedirect, Http404
+from django.template import Context, loader
+from cerandi_app.models import *;
+
+# list of mobile User Agents
+mobile_uas = [
+	'w3c ','acs-','alav','alca','amoi','audi','avan','benq','bird','blac',
+	'blaz','brew','cell','cldc','cmd-','dang','doco','eric','hipt','inno',
+	'ipaq','java','jigs','kddi','keji','leno','lg-c','lg-d','lg-g','lge-',
+	'maui','maxo','midp','mits','mmef','mobi','mot-','moto','mwbp','nec-',
+	'newt','noki','oper','palm','pana','pant','phil','play','port','prox',
+	'qwap','sage','sams','sany','sch-','sec-','send','seri','sgh-','shar',
+	'sie-','siem','smal','smar','sony','sph-','symb','t-mo','teli','tim-',
+	'tosh','tsm-','upg1','upsi','vk-v','voda','wap-','wapa','wapi','wapp',
+	'wapr','webc','winw','winw','xda','xda-'
+	]
+
+mobile_ua_hints = [ 'SymbianOS', 'Opera Mini', 'iPhone' ]
+
+
+def mobileBrowser(request):
+    ''' Super simple device detection, returns True for mobile devices '''
+
+    mobile_browser = False
+    ua = request.META['HTTP_USER_AGENT'].lower()[0:4]
+
+    if (ua in mobile_uas):
+        mobile_browser = True
+    else:
+        for hint in mobile_ua_hints:
+            if request.META['HTTP_USER_AGENT'].find(hint) > 0:
+                mobile_browser = True
+
+    return mobile_browser
+
+
+def index_page(request):
+    '''Render the index page'''
+
+    if mobileBrowser(request):
+        t = loader.get_template('swipe.html')
+    else:
+        t = loader.get_template('swipe.html') # Kehne: IMMER MOBILE ZUM TESTEN!
+
+    c = Context( { }) # normally your page data would go here
+
+    return HttpResponse(t.render(c))
+
+def advisor_page(request):
+    '''Render the advisor page'''
+
+    if mobileBrowser(request):
+        t = loader.get_template('client_list.html')
+    else:
+        t = loader.get_template('client_list.html') # Kehne: IMMER MOBILE ZUM TESTEN!
+
+    c = Context( { }) # normally your page data would go here
+
+    return HttpResponse(t.render(c))
+
+def stock_collection(request):
+    all_stocks = Stock.objects.all().order_by('-wkn')
+    return render(request, 'swipe.html',{'all_stocks':all_stocks})
+
