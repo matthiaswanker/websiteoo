@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="jquery.mobile-1.4.4.min.css">
-<link rel="stylesheet" href="swipestyle.css">
-<script src="jquery-1.11.3.min.js"></script>
-<script src="jquery.mobile-1.4.4.min.js"></script>
-<script src="swipescript.js"></script>
+<link rel="stylesheet" href="{% static "cerandi_app/css/jquery.mobile-1.4.4.min.css"%}">
+<link rel="stylesheet" href="{% static "cerandi_app/css/swipestyle.css"%}">
+<script src="{% static "cerandi_app/js/jquery-1.11.3.min.js"%}"></script>
+<script src="{% static "cerandi_app/js/jquery.mobile-1.4.4.min.js"%}"></script>
+<script src="{% static "cerandi_app/js/swipescript.js"%}"></script>
 </head>
 <body>
 <div id="top_menu">
-	<p align="center"><img href="{% static "cerandi_app/img/logo/Logo_symbol.png"%}" alt="Stock" height="20" width="20">  PH_# of 120 <img src="logo_text.png" alt="Cerandi" height="20" width="42"> </h1>
+	<p align="center"><img src="{% static "cerandi_app/img/logo/Logo_symbol.png"%}" alt="Stock" height="20" width="20">  PH_# of 120 <img src="{% static "cerandi_app/img/logo/logo_text.png"%}" alt="Cerandi" height="20" width="42"> </h1>
 </div>
   <div id="container">
     <div class="buddy" style="display: block;">
@@ -30,8 +30,8 @@
 			<tr> <td class="subtitle">Sector</td> <td>PLACEHOLDER Sector</td> </tr>
 			<tr> <td class="subtitle">WTF Gattung(e.g. Namens-Stammaktie)</td> <td>PLACEHOLDER Gattung</td> </tr> </table>
 		<p>PLACEHOLDER Description Text</p>
-		<img src="35px-X_mark.svg.png" alt="Dislike!" height="42" width="42" align="left">
-		<img src="35px-Yes_check.svg.png" alt="Like!" height="42" width="42" align="right">
+		<img src="{% static "cerandi_app/img/logo/35px-X_mark.svg.png"%}" alt="Dislike!" height="42" width="42" align="left">
+		<img src="{% static "cerandi_app/img/logo/35px-Yes_check.svg.png"%}" alt="Like!" height="42" width="42" align="right">
     </div>
 	<div class="buddy" style="display: block;">
 		<h1>PLACEHOLDER for Company Name</h1>
@@ -49,15 +49,15 @@
 			<tr> <td class="subtitle">Sector</td> <td>PLACEHOLDER Sector</td> </tr>
 			<tr> <td class="subtitle">WTF Gattung(e.g. Namens-Stammaktie)</td> <td>PLACEHOLDER Gattung</td> </tr> </table>
 		<p>PLACEHOLDER Description Text</p>
-		<img src="35px-X_mark.svg.png" alt="Dislike!" height="42" width="42" align="left">
-		<img src="35px-Yes_check.svg.png" alt="Like!" height="42" width="42" align="right">
+		<img src="{% static "cerandi_app/img/35px-X_mark.svg.png"%}" alt="Dislike!" height="42" width="42" align="left">
+		<img src="{% static "cerandi_app/img/35px-Yes_check.svg.png"%}" alt="Like!" height="42" width="42" align="right">
     </div>
   </div>
   <div id="bottom_menu">
-	<img src="watchlist-100.png" alt="Watchlist" height="100" width="100" align="middle">
-	<img src="messages-100.png" alt="Messages" height="100" width="100" align="middle">
-	<img src="discover-100.png" alt="Discover" height="100" width="100" align="middle">
-	<img src="logout-100.png" alt="Logout" height="100" width="100" align="middle">
+	<img src="{% static "cerandi_app/img/bottom_menu/watchlist.png"%}" alt="Watchlist" height="100" width="100" align="middle">
+	<img src="{% static "cerandi_app/img/bottom_menu/messages.png"%}" alt="Messages" height="100" width="100" align="middle">
+	<img src="{% static "cerandi_app/img/bottom_menu/discover.png"%}" alt="Discover" height="100" width="100" align="middle">
+	<img src="{% static "cerandi_app/img/bottom_menu/logout.png"%}" alt="Logout" height="100" width="100" align="middle">
   </div>
 
 </body>
