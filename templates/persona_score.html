@@ -9,16 +9,16 @@
 
 
 
-    <form action="{% url 'persona_score' %}" method="post">
+    <form action="{% url 'persona_score' %}" method="post" id="persona">
     {% csrf_token %}
     <div align="center">
         <h1>More about you </h1>
         <div>User ID: {{ new_Client.pk }}</div>
-        <img id="persona_image1" src="{% static "statement/img/personas/persona1.png"%}" alt="Persona 1" height="100" width="100">
-        <img id="persona_image2" src="{% static "statement/img/personas/persona2.png"%}" alt="Persona 2" height="100" width="100">
-        <img id="persona_image3" src="{% static "statement/img/personas/persona3.png"%}" alt="Persona 3" height="100" width="100">
-        <div><input  id="persona_score" type="text" name="persona_score" placeholder="Select your persona" value="" ></div>
-        <input type="submit" value="Generate">
+        <div><img id="persona_image1" src="{% static "statement/img/personas/persona1.png"%}" alt="Persona 1" height="100" width="100"></div>
+        <div><img id="persona_image2" src="{% static "statement/img/personas/persona2.png"%}" alt="Persona 2" height="100" width="100"></div>
+        <div><img id="persona_image3" src="{% static "statement/img/personas/persona3.png"%}" alt="Persona 3" height="100" width="100"></di>
+        <div><input  id="persona_score" type="text" name="persona_score" placeholder="Select your persona" value="" style="display:none"></div>
+        <input type="submit" value="Generate" style="display:none">
     </div>
     </form>
     <!--<div style="padding: 5em;"><a href="/tags">Andere Bist-Du-Nicht Fragen </a></div>-->
@@ -28,12 +28,15 @@
         <script language="javascript" type="text/javascript">
     document.getElementById('persona_image1').addEventListener('click', function (e) {
         document.getElementById("persona_score").setAttribute("value", "1");
+        document.forms["persona"].submit();
     });
     document.getElementById('persona_image2').addEventListener('click', function (e) {
         document.getElementById("persona_score").setAttribute("value", "2");
+        document.forms["persona"].submit();
     });
     document.getElementById('persona_image3').addEventListener('click', function (e) {
         document.getElementById("persona_score").setAttribute("value", "3");
+        document.forms["persona"].submit();
     });
     </script>
 
