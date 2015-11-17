@@ -121,14 +121,14 @@
     /* For smaller displays like laptops */
     @media (min-width: 768px) and (max-width: 979px) {
       .container {
-        width: 724px
+        width: auto
       }
     }
 
     /* For larger displays */
     @media (min-width: 1200px) {
       .container {
-        width: 1170px
+        width: auto
       }
     }
   </style>
@@ -140,9 +140,9 @@
   <!-- The container is used to define the width of the slideshow -->
   <div class="container">
     <div id="slides">
-      <img src="{% static "statement/img/cerandi.jpg" %}">
-      <img src="{% static "statement/img/example-slide-2.jpg" %}">
-      <img src="{% static "statement/img/example-slide-3.jpg" %}">
+      <img src="{% static "statement/img/slider1.gif" %}">
+      <img src="{% static "statement/img/slider2.gif" %}">
+      <a href="./login_form.html"></ahref><img src="{% static "statement/img/slider3.gif" %}"></a>
       <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left icon-large"></i></a>
       <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right icon-large"></i></a>
     </div>
@@ -162,7 +162,7 @@
     $(function() {
       $('#slides').slidesjs({
         width: 940,
-        height: 528,
+        height: 1200,
         navigation: false
       });
     });
