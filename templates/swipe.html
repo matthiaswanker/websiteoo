@@ -17,12 +17,13 @@
         }
     </style>
 </head>
-<body>
+<body style="">
 
 <div id="top_menu">
-    <p align="center"><img src="{% static "statement/img/logos/logo_complete.png" %}" alt="Stock" width="20%">
+    <p align="center"><img src="{% static "statement/img/logos/logo_complete.png" %}" alt="cerandi" width="40%">
     </p>
 </div>
+<div id="middle_part"></div>
 
 <div id="container">
     {% for stock in all_stocks %}
@@ -76,18 +77,29 @@
             </tr>
         </table>
         <p id="description_paragraph">{{   i.description }}</p>
-        <img src="{% static "statement/img/35px-X_mark.svg.png" %}" alt="Dislike!" height="20" width="20" align="left">
-        <img src="{% static "statement/img/35px-Yes_check.svg.png" %}" alt="Like!" height="20" width="20" align="right">
+        <img id="button_dislike" src="{% static "statement/img/35px-X_mark.svg.png" %}" alt="Dislike!" height="20" width="20" align="left">
+        <img id="button_like" src="{% static "statement/img/35px-Yes_check.svg.png" %}" alt="Like!" height="20" width="20" align="right">
     </div>
     {% endfor %}
 </div>
 
 <div id="bottom_menu" align="middle">
-    <a href="http://google.de"><img src="{% static "statement/img/bottom_menu/watchlist.png" %}" alt="Watchlist"  width="18%"></a>
-    <a href="#"><img src="{% static "statement/img/bottom_menu/messages.png" %}" alt="Messages" width="18%"></a>
-    <a href="#"><img src="{% static "statement/img/bottom_menu/discover.png" %}" alt="Discover"  width="18%"></a>
-    <a href="#"><img src="{% static "statement/img/bottom_menu/logout.png" %}" alt="Logout" width="18%"></a>
+    <a href="http://google.de"><img src="{% static "statement/img/bottom_menu/watchlist.png" %}" class="bottom_menu_button" alt="Watchlist"  width="14%"></a>
+    <a href="#"><img src="{% static "statement/img/bottom_menu/messages.png" %}" class="bottom_menu_button" alt="Messages" width="14%"></a>
+    <a href="#"><img src="{% static "statement/img/bottom_menu/discover.png" %}" class="bottom_menu_button" alt="Discover"  width="14%"></a>
+    <a href="#"><img src="{% static "statement/img/bottom_menu/logout.png" %}" class="bottom_menu_button" alt="Logout" width="14%"></a>
 </div>
 
 </body>
+
+<script language="javascript" type="text/javascript">
+    document.getElementById('button_dislike').addEventListener('click', function (e) {
+        document.getElementById("persona_score").setAttribute("value", "1");
+    });
+    document.getElementById('button_like').addEventListener('click', function (e) {
+        document.getElementById("persona_score").setAttribute("value", "2");
+    });
+);
+    </script>
+
 </html>

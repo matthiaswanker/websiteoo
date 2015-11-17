@@ -12,7 +12,7 @@
     <form action="{% url 'persona_score' %}" method="post" id="persona">
     {% csrf_token %}
     <div align="center">
-        <h1>More about you </h1>
+        <h1>Tell us more about you - what's your attitude towards investment?</h1>
         <div>User ID: {{ new_Client.pk }}</div>
         <div><img id="persona_image1" src="{% static "statement/img/personas/persona1.png"%}" alt="Persona 1" height="100" width="100"></div>
         <div><img id="persona_image2" src="{% static "statement/img/personas/persona2.png"%}" alt="Persona 2" height="100" width="100"></div>
