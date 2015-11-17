@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+    <!-- Java Script for search -->
+	<script src="{% static 'senacor/js/jquery-2.1.4.min.js'%}"> </script>
+    <script src="{% static 'senacor/js/ajax_profile_search.js'%}"> </script>
+
+
+    <h5>Profiles</h5>
+    {% csrf_token %}
+
+
+    <!-- Disable form with button -->
+    <!--    <div id="test">
+    </div>
+    <div class="row">
+    <form method="post">
+	{% csrf_token %}
+    {{form}}
+    <input type="submit" value="Submit" />
+    </form>
+    </div> -->
+
+  	<p>Search<br>
+    <input type="text" id="search" name="search"/></p>
+    
+    <div id='loadingmessage' style='display:none'>
+  	LOADING
+	</div>
+
+    <br>
+    # Ordered by name
+    <br>
+
+    <table class="u-full-width" id="search-results">
+		<thead>
+	    	<tr>
+	      		<th>Profile</th>
+	      		<th>Latest Position</th>
+	      		<th>Latest Company</th>
+	      	</tr>
+      	</thead>
+      	<tbody>
+      	{% for profile in profile_list %}
+      	{% url 'profile_detail' profile.pk as var_profile%}
+		<tr>
+			<td><a href="{{var_profile}}">{{profile}}</td>
+	    	<td>{{profile.position_set.all.0}}</td>
+	    	<td>{{profile.position_set.all.0.company}}</td>
+	    </tr>
+		{% endfor %}
+		</tbody>
+	</table>	
+
+	<!-- http://stackoverflow.com/questions/13048086/django-template-rows-of-multiple-items -->
+<!-- 	<div class="row">
+		{% for profile in profile_list %}
+	    <div class="three columns"><a href="/crawler/profile/{{ profile.id }}/">{{profile}}</a></div>
+	    {% if forloop.counter|divisibleby:4 %}
+			</div>
+			<div class="row">
+	    {% endif %}
+		{% endfor %}
+	</div> -->
+
+{% endblock %}
