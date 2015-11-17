@@ -17,8 +17,9 @@
     </p>
 </div>
 
-{% for stock in all_stocks %}
+
     <div class="slider">
+        {% for stock in all_stocks %}
         <div class="slide" >
             <h3>{{   stock.ticker_name }}  </h3>
             <img id="logo"
@@ -68,11 +69,12 @@
             </tr>
         </table>
         <p id="description_paragraph">{{   i.description }}</p>
-        <img src="{% static "statment/img/35px-X_mark.svg.png" %}" alt="Dislike!" height="42" width="42" align="left">
-        <img src="{% static "statment/img/35px-Yes_check.svg.png" %}" alt="Like!" height="42" width="42" align="right">
+        <img src="{% static "statment/img/35px-X_mark.svg.png" %}" alt="Dislike!" height="42%" width="42%" align="left">
+        <img src="{% static "statment/img/35px-Yes_check.svg.png" %}" alt="Like!" height="42%" width="42%" align="right">
         </div>
+         {% endfor %}
     </div>
-    {% endfor %}
+
 
 <div id="bottom_menu" align="middle">
     <img src="{% static "statement/img/bottom_menu/watchlist.png" %}" alt="Watchlist"  width="18%">

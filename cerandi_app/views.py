@@ -72,7 +72,6 @@ def register_user(request):
     new_Client = Client()
     new_Client.first_name = first_name
     new_Client.save()
-    print first_name
     request.session['new_client'] = new_Client.pk
     return render(request,'persona_score.html',{'new_Client' : new_Client})
 
@@ -85,11 +84,15 @@ def persona_score(request):
     #return render(request, 'swipe.html',{'new_Client' : new_Client})
     return redirect('tinder', client_pk=new_Client.pk)
 
-def update_investment(request):
-    stock_pk = request.POST['stock_pk']
-    client_pk = request.POST['client_pk']
-    print stock_pk+" "+client_pk
-    pass
+def update_investment(request,client_pk,stock_pk):
+    #stock_pk = request.POST['stock_pk']
+    #client_pk = request.POST['client_pk']
+    new_investment = Investment()
+    new_investment.stock = Stock.objects.get(pk= stock_pk)
+    new_investment.client = Client.objects.get(pk = client_pk)
+    new_investment.save()
+    return render(request, 'login_form.html')
+
 # def persona_score(request):#,new_Client_pk):
 #     #print new_Client_pk
 #     #persona_score = request.POST['persona_score']
