@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.db.models import Q
 from django.shortcuts import redirect
 # Author: Kehne, 17.11 - 12:42
 
@@ -38,6 +39,10 @@ def mobileBrowser(request):
 
     return mobile_browser
 
+def tinder(request,client_pk):
+    stocks_left = Stock.objects.filter(~Q(investment__client__pk=client_pk))
+    all_stocks = stocks_left
+    return render(request, 'swipe.html',{'all_stocks': all_stocks})
 
 def index_page(request):
     '''Render the index page'''
