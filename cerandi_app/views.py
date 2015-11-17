@@ -59,16 +59,19 @@ def advisor_page(request):
     else:
         t = loader.get_template('client_list.html') # Kehne: IMMER MOBILE ZUM TESTEN!
 
-    c = Context( { } ) # normally your page data would go here
+    c = Context( { }) # normally your page data would go here
 
     return HttpResponse(t.render(c))
 
 def stock_collection(request):
-    all_stocks = Stock.objects.all()
+    all_stocks = Stock.objects.all().order_by('-wkn')
     return render(request, 'swipe.html',{'all_stocks':all_stocks})
 
 def login_form(request):
     return render(request, 'login_form.html')
+
+def logout(request):
+    return render(request, 'logout.html')
 
 def register_user(request):
     first_name = request.POST['first_name']
