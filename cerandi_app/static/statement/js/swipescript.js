@@ -6,7 +6,7 @@ $(document).ready(function(){
         var index = document.URL.search("client/[0-9]+") + 7;
         var user_id = document.URL.slice(29, document.URL.length-1);
         //alert(user_id);
-      $.post("update",{"stock_pk":$(this).children("div:first").text(), "user_id":user_id} ,function(data){
+      $.post("update",{"stock_pk":$(this).children("div:first").text(), "client_pk":user_id} ,function(data){
             alert(data);});
       $(this).append('<div class="status like">Like!</div>');      
       if ( $(this).is(':last-child') ) {
