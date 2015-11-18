@@ -29,6 +29,21 @@
   position: absolute;
   cursor: hand;
 }
+.buddy:nth-child(2n+1) {
+	transform: rotate(-2deg);
+}
+.buddy:nth-child(3n+2) {
+	transform: rotate(1deg);
+}
+.buddy:nth-child(5n+3) {
+	transform: rotate(-3deg);
+}
+.buddy:nth-child(7n+5) {
+	transform: rotate(4deg);
+}
+.buddy:nth-child(11n+7) {
+	transform: rotate(-2deg);
+}
 .rotate-left {
   transform: rotate(30deg) scale(0.8);
   transition: 1s;
@@ -43,6 +58,7 @@
   margin-left: -400px;
   cursor: w-resize;
 }
+
 .avatar {
   background: #222;
   width: 340px;
