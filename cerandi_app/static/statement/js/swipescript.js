@@ -9,7 +9,7 @@ $(document).ready(function(){
         //alert(user_id);
       $.get("update/"+$(this).children("div:first").text());
       $(this).append('<div class="status like">Like!</div>');
-        $('.noti_bubble').html((counterValue+1));
+        $('.notif_bubble').html((counterValue+1));
       /*if ( $(this).is(':last-child') ) {
         $('.buddy:nth-child(1)').removeClass ('rotate-left rotate-right').fadeIn(300);
        } else {
@@ -38,7 +38,7 @@ $(document).ready(function(){
         //alert(user_id);
       $.get("update/"+$(this).parent().children("div:first").text());
       $(this).parent().append('<div class="status like">Like!</div>');
-         $('.noti_bubble').html((counterValue+1));
+         $('.notif_bubble').html((counterValue+1));
       /*if ( $(this).is(':last-child') ) {
         $('.buddy:nth-child(1)').removeClass ('rotate-left rotate-right').fadeIn(300);
        } else {

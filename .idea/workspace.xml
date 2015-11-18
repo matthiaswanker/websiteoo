@@ -4,6 +4,9 @@
     <list default="true" id="e4a4d974-22cb-4d78-8298-b56bb98e7682" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cerandi_app/static/statement/img/logos/logo_symbol.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cerandi_app/static/statement/css/swipestyle.css" afterPath="$PROJECT_DIR$/cerandi_app/static/statement/css/swipestyle.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cerandi_app/static/statement/js/swipescript.js" afterPath="$PROJECT_DIR$/cerandi_app/static/statement/js/swipescript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/swipe.html" afterPath="$PROJECT_DIR$/templates/swipe.html" />
     </list>
     <ignored path="cerandi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,8 +70,8 @@
       <file leaf-file-name="swipe.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/swipe.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.423077">
-              <caret line="87" column="171" selection-start-line="87" selection-start-column="171" selection-end-line="87" selection-end-column="171" />
+            <state vertical-scroll-proportion="-10.807693">
+              <caret line="87" column="156" selection-start-line="87" selection-start-column="156" selection-end-line="87" selection-end-column="156" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -76,21 +79,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="swipescript.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="swipescript.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/js/swipescript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33794466">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="swipestyle.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="swipestyle.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/css/swipestyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.961538">
-              <caret line="114" column="12" selection-start-line="114" selection-start-column="12" selection-end-line="114" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.3625">
+              <caret line="112" column="6" selection-start-line="112" selection-start-column="6" selection-end-line="112" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -121,8 +124,8 @@
         <option value="$PROJECT_DIR$/templates/login_form.html" />
         <option value="$PROJECT_DIR$/templates/persona_score.html" />
         <option value="$PROJECT_DIR$/templates/swipe.html" />
-        <option value="$PROJECT_DIR$/cerandi_app/static/statement/css/swipestyle.css" />
         <option value="$PROJECT_DIR$/cerandi_app/static/statement/js/swipescript.js" />
+        <option value="$PROJECT_DIR$/cerandi_app/static/statement/css/swipestyle.css" />
       </list>
     </option>
   </component>
@@ -783,7 +786,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447805987106</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="included notification bubble/counter for watchlist">
+      <created>1447805995434</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1447805995434</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1157,18 +1166,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/css/swipestyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.961538">
-          <caret line="114" column="12" selection-start-line="114" selection-start-column="12" selection-end-line="114" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/swipe.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.423077">
-          <caret line="87" column="171" selection-start-line="87" selection-start-column="171" selection-end-line="87" selection-end-column="171" />
+        <state vertical-scroll-proportion="-10.807693">
+          <caret line="87" column="156" selection-start-line="87" selection-start-column="156" selection-end-line="87" selection-end-column="156" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -1177,8 +1178,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/js/swipescript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33794466">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/css/swipestyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3625">
+          <caret line="112" column="6" selection-start-line="112" selection-start-column="6" selection-end-line="112" selection-end-column="6" />
           <folding />
         </state>
       </provider>
