@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.db.models import Q
 from django.shortcuts import redirect
+from .commands import create_user, create_watchlist, optimize_watchlist
+import random
 # Author: Kehne, 17.11 - 12:42
 
 # Some standard Django stuff
@@ -109,8 +111,20 @@ def client_detail(request, advisor_pk, client_pk):
                    'chat_url': chat_url})
 
 
-def analyze_page(request, advisor_pk, client_pk):
-    return render(request, 'logout.html')
+def analyze(request, advisor_pk, client_pk):
+    client = Client.objects.get(pk=client_pk)
+    user_id = create_user(str(random.randint(0,1000)))
+    investments = Investment.objects.filter(client__pk = client_pk)
+    stock_ids = [x.stock.sap_id for x in investments]
+    watchlist_id = create_watchlist(user_id, stock_ids)
+    allocation_and_return = optimize_watchlist(watchlist_id)
+    chat_url = client.first_name+"_"+ client.last_name+"_"+client_pk
+    return render(request, 'analyze.html',
+                  {"allocation_optimized": allocation_and_return[0],
+                   "estimated_return": allocation_and_return[1],
+                   "client": client,
+                   "advisor": Advisor.objects.get(pk=advisor_pk),
+                   'chat_url': chat_url})
 
 # def persona_score(request):#,new_Client_pk):
 #     #print new_Client_pk
