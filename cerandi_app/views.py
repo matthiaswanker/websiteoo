@@ -50,6 +50,12 @@ def index_page(request):
 def login_form(request):
     return render(request, 'login_form.html')
 
+def chat(request,client_pk):
+    last_name = Client.objects.get(pk=client_pk).last_name
+    first_name = Client.objects.get(pk=client_pk).first_name
+    chat_url = first_name+"_"+ last_name+"_"+client_pk
+    return render(request, 'chat.html',{'chat_url' : chat_url})
+
 def logout(request):
     return render(request, 'logout.html')
 
