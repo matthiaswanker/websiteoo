@@ -95,7 +95,7 @@ def update_investment(request,client_pk,stock_pk):
 
 #no plz filtering implemented
 def client_list(request, advisor_pk):
-    all_clients = Client.objects.all()
+    all_clients = Client.objects.all().order_by('-plz_location')
     return render(request, 'client_list.html',
                   {'all_clients': all_clients,
                    'advisor': Advisor.objects.get(pk=advisor_pk)})
