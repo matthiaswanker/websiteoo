@@ -35,7 +35,7 @@
     <div style="margin-left: 20%;"><input type="submit" value="{{ stock.ticker_name }}" width="55%"></div>
 {% endfor %}
 <div style="visibility: hidden;"><input type="submit" value="Share my Portfolio" width="55%"></div>
-<a href="./chat"> <div style="margin-left: 20%"><input class="button-primary" type="submit"  value="Share my Portfolio"></div></a>
+<div style="margin-left: 20%"><input id="button_share" class="button-primary" type="submit"  value="Share my Portfolio"></div>
 
 
 </div>
@@ -51,13 +51,13 @@
 </body>
 
 <script language="javascript" type="text/javascript">
-    document.getElementById('button_dislike').addEventListener('click', function (e) {
-        document.getElementById("persona_score").setAttribute("value", "1");
+    document.getElementById('button_share').addEventListener('click', function () {
+        setTimeout(showMessage, 10000);
     });
-    document.getElementById('button_like').addEventListener('click', function (e) {
-        document.getElementById("persona_score").setAttribute("value", "2");
-    });
-);
+
+    function showMessage(){
+        document.getElementById("messages_bubble").innerHTML = "1";
+    }
     </script>
 
 </html>
