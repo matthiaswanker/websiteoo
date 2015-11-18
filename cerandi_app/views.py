@@ -89,9 +89,14 @@ def client_list(request, advisor_pk):
                    'advisor': Advisor.objects.get(pk=advisor_pk)})
 
 def client_detail(request, advisor_pk, client_pk):
+    investments = Investment.objects.filter(client__pk = client_pk)
     return render(request, 'client_detail.html',
                   {'client': Client.objects.get(pk=client_pk),
-                   'advisor': Advisor.objects.get(pk=advisor_pk)})
+                   'advisor': Advisor.objects.get(pk=advisor_pk),
+                   'investments': investments})
+
+def analyze_page(request, advisor_pk, client_pk):
+    return render(request, 'logout.html')
 
 # def persona_score(request):#,new_Client_pk):
 #     #print new_Client_pk
