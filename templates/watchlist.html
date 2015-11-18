@@ -30,12 +30,12 @@
 {% endfor %}
 
 <div style="visibility: hidden;"><input type="submit" value="Share my Portfolio" width="55%"></div>
-<a href="./sharepf"><div style="margin-left: 20%"><input type="submit" value="Share my Portfolio" width="55%"></div></a>
+<a href="{{ request.path }}/sharepf"><div style="margin-left: 20%"><input type="submit" value="Share my Portfolio" width="55%"></div></a>
 </div>
 </div>
 
 <div id="bottom_menu" align="middle">
-    <a href="{{ request.path }}sharepf"><img src="{% static "statement/img/bottom_menu/watchlist.png" %}" class="bottom_menu_button" alt="Watchlist"  width="14%"><div class="noti_bubble" id="watchlist_bubble">0</div></a>
+    <a href="#"><img src="{% static "statement/img/bottom_menu/watchlist.png" %}" class="bottom_menu_button" alt="Watchlist"  width="14%"><div class="noti_bubble" id="watchlist_bubble">0</div></a>
     <a href="./chat"><img src="{% static "statement/img/bottom_menu/messages.png" %}" class="bottom_menu_button" alt="Messages" width="14%"><div class="noti_bubble" id="messages_bubble">0</div></a>
     <a href="."><img src="{% static "statement/img/bottom_menu/discover.png" %}" class="bottom_menu_button" alt="Discover"  width="14%"></a>
     <a href="/logout"><img src="{% static "statement/img/bottom_menu/logout.png" %}" class="bottom_menu_button" alt="Logout" width="14%"></a>

@@ -113,7 +113,7 @@ def client_detail(request, advisor_pk, client_pk):
                    'chat_url': chat_url})
 
 
-def sharepf():
+def sharepf(request):
      return render(request, 'sharepf.html')
 
 def analyze(request, advisor_pk, client_pk):
