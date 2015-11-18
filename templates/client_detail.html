@@ -6,6 +6,10 @@
 	<script src="{% static 'senacor/js/jquery-2.1.4.min.js'%}"> </script>
     <script src="{% static 'senacor/js/ajax_profile_search.js'%}"> </script>
 
+    <header id="header">
+            <h1 align="center"><img src="{% static "statement/img/logos/logo_complete.png"%}" alt="logo" align="center" width="20%"></h1>
+        </header>
+
 
     <h1 align="middle">Overview: <b>{{ client.first_name }} {{ client.last_name }}</b> | <img id="persona_image" src=
             "{% if client.risk_ratio == 1 %} {% static "statement/img/personas/persona1.png"%}

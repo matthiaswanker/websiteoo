@@ -24,6 +24,10 @@
 }
 </style>
 
+    <header id="header">
+            <h1 align="center"><img src="{% static "statement/img/logos/logo_complete.png"%}" alt="logo" align="center" width="50%"></h1>
+        </header>
+
 
     <form action="{% url 'persona_score' %}" method="post" id="persona">
     {% csrf_token %}

@@ -5,6 +5,7 @@
     <!-- Java Script for search -->
 	<script src="{% static 'senacor/js/jquery-2.1.4.min.js'%}"> </script>
     <script src="{% static 'senacor/js/ajax_profile_search.js'%}"> </script>
+    <script src="{% static 'statement/js/balken.js'%}"> </script>
 
 
     <h1 align="middle">Analysis results for: <b>{{ client.first_name }} {{ client.last_name }}</b> | <img id="persona_image" src=
@@ -32,6 +33,21 @@
                 {% endfor %}
             </ol>
         </div>
+
+<ul class="skill-list">
+  <li class="skill">
+    <h3>Possible return with trivial allocations:</h3>
+    <progress class="skill-1" max="100" value="50">
+      <strong>Current Total: 200000</strong>
+    </progress>
+  </li>
+    <h3>Possible return with SAP trading strategies:</h3>
+  <li class="skill">
+    <progress class="skill-2" max="100" value="75">
+      <strong>Skill Level: 75%</strong>
+    </progress>
+  </li>
+</ul>
     </div>
     <div style="float:right; width:45%; margin-left:10px;">
         <div id="chat" align="middle" style="height:100%;">
@@ -40,7 +56,7 @@
             <script async src="http://tlk.io/embed.js" type="text/javascript"></script>
         </div>
     </div>
-    <footer>
+    <footer style="height:120px;">
         <form action="{% url 'analyze' advisor_pk=advisor.pk client_pk=client.pk %}" method="post">
             {% csrf_token %}
             <div style="float:left;margin-left:20%;">
