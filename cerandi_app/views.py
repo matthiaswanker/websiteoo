@@ -66,11 +66,13 @@ def logout(request):
     return render(request, 'logout.html')
 
 def register_user(request):
+    items = ['63065', '60311', '64283']
     first_name = request.POST['first_name']
     last_name = request.POST["last_name"]
     new_Client = Client()
     new_Client.first_name = first_name
     new_Client.last_name = last_name
+    new_Client.plz_location = random.choice(items)
     new_Client.save()
     request.session['new_client'] = new_Client.pk
     return render(request,'persona_score.html',{'new_Client' : new_Client})
