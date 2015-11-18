@@ -24,18 +24,15 @@
 <div id="container">
 
 <div style="margin-top: 15%;">
-<h2 style="margin-left: 5%;font-size: 30px">Current Stocks</h2>
-{% for stock in stocks_invested %}
-    <div style="margin-left: 20%;"><input type="submit" value="{{ stock.ticker_name }}" width="55%"></div>
-{% endfor %}
-<div style="visibility: hidden;"><input type="submit" value="Share my Portfolio" width="55%"></div>
-<a href="./sharepf"><button style="margin-left: 20%"></button></a>
-</div>
+<h2 style="margin-left: 5%;font-size: 30px">You Shared Your Portfolio</h2>
+<h3 style="margin-left: 5%;font-size: 30px">Several Financial Advisors will have a look at your Portfolio.
+Using SAP HANA they will help you out to improve your investments. Have a look at your chat. Someone wants to chat
+with you.</h3>
 </div>
 
 <div id="bottom_menu" align="middle">
     <a href="#"><img src="{% static "statement/img/bottom_menu/watchlist.png" %}" class="bottom_menu_button" alt="Watchlist"  width="14%"><div class="noti_bubble" id="watchlist_bubble">0</div></a>
-    <a href="./chat"><img src="{% static "statement/img/bottom_menu/messages.png" %}" class="bottom_menu_button" alt="Messages" width="14%"><div class="noti_bubble" id="messages_bubble">0</div></a>
+    <a href="./chat"><img src="{% static "statement/img/bottom_menu/messages.png" %}" class="bottom_menu_button" alt="Messages" width="14%"><div class="noti_bubble" id="messages_bubble">1</div></a>
     <a href="."><img src="{% static "statement/img/bottom_menu/discover.png" %}" class="bottom_menu_button" alt="Discover"  width="14%"></a>
     <a href="/logout"><img src="{% static "statement/img/bottom_menu/logout.png" %}" class="bottom_menu_button" alt="Logout" width="14%"></a>
 </div>

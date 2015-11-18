@@ -113,6 +113,9 @@ def client_detail(request, advisor_pk, client_pk):
                    'chat_url': chat_url})
 
 
+def sharepf():
+     return render(request, 'sharepf.html')
+
 def analyze(request, advisor_pk, client_pk):
     client = Client.objects.get(pk=client_pk)
     #user_id = create_user(str(random.randint(0,1000)))
