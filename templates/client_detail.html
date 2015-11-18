@@ -48,13 +48,13 @@
         <form action="{% url 'analyze' advisor_pk=advisor.pk client_pk=client.pk %}" method="post">
             {% csrf_token %}
             <div style="float:left;margin-left:20%;">
-                <div style="padding:40px"><input class="button-primary" type="submit" value="Analyze the watchlist!"></div>
+                <div style="margin-bottom:40px"><input class="button-primary" type="submit" value="Analyze the watchlist!"></div>
             </div>
         </form>
         <form action="{% url 'client_list' advisor_pk=advisor.pk %}" method="get">
             {% csrf_token %}
             <div style="float:right;margin-right:20%;">
-                <div style="padding:40px"><input class="button" type="submit" value="Back to the overview!"></div>
+                <div style="margin-bottom:40px"><input class="button" type="submit" value="Back to the overview!"></div>
             </div>
         </form>
     </footer>

@@ -28,8 +28,9 @@
 {% for stock in stocks_invested %}
     <div style="margin-left: 20%;"><input type="submit" value="{{ stock.ticker_name }}" width="55%"></div>
 {% endfor %}
+
 <div style="visibility: hidden;"><input type="submit" value="Share my Portfolio" width="55%"></div>
-<a href="./sharepf"><button style="margin-left: 20%"></button></a>
+<a href="./sharepf"><div style="margin-left: 20%"><input type="submit" value="Share my Portfolio" width="55%"></div></a>
 </div>
 </div>
 
@@ -40,17 +41,7 @@
     <a href="/logout"><img src="{% static "statement/img/bottom_menu/logout.png" %}" class="bottom_menu_button" alt="Logout" width="14%"></a>
 </div>
 
-<script language="javascript" type="text/javascript">
-    document.getElementById('button_share').addEventListener('click', function () {
-        document.getElementById("messages_bubble").innerHTML = "1";
-        setTimeout(showMessage, 1000);
-    });
 
-    function showMessage(){
-        document.getElementById("messages_bubble").innerHTML = "1";
-    }
-
-</script>
 
 </body>
 </html>
