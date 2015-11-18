@@ -18,18 +18,49 @@
     # Ordered by name
     <br>-->
 
-    <div id="container" align="middle">
-        <ul>
-        {% for client in all_clients %}
-        <li class="listing">
-            <img id="persona_image" src=
+
+
+
+
+
+<div align="center">
+        <h1>Tell us more about you. What's your attitude towards investment?</h1>
+        <div><br></div>
+        <table style="width:50%">
+            <tr>
+                <th>Character</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+     <th>Geo Location</th>
+
+  </tr>
+
+            <!--heade table-->
+            {% for client in all_clients %}
+
+            <tr id="persona_type1" style="border:groove">
+
+                <td class="top_row">
+                    <a href="{% url 'client_detail' advisor_pk=advisor.pk client_pk=client.pk %}">
+                    <div>
+                    <img id="persona_image" src=
             "{% if client.risk_ratio == 1 %} {% static "statement/img/personas/persona1.png"%}
              {% elif client.risk_ratio == 2 %} {% static "statement/img/personas/persona2.png"%}
              {% else %} {% static "statement/img/personas/persona3.png"%}
              {% endif %}" alt="Persona 1" height="50" width="50">
-            <a href="{% url 'client_detail' advisor_pk=advisor.pk client_pk=client.pk %}">{{ client.last_name }}, {{ client.first_name }}</a>
-        </li>
-        {% endfor %}
-        </ul>
+                    </a>
+
+                </div></td>
+
+                <td style="font-size: 20px" class="textfield" class="top_row"><a href="{% url 'client_detail' advisor_pk=advisor.pk client_pk=client.pk %}">{{ client.first_name }}</a></td>
+                <td style="font-size: 20px" class="textfield" class="top_row"><a href="{% url 'client_detail' advisor_pk=advisor.pk client_pk=client.pk %}">{{ client.last_name }}</a></td>
+            <td style="font-size: 20px" class="textfield" class="top_row"><a href="{% url 'client_detail' advisor_pk=advisor.pk client_pk=client.pk %}">{{ client.plz_location }}</a></td>
+                </a>
+
+            </tr>
+            {% endfor %}
+        </table>
+        <div><input  id="persona_score" type="text" name="persona_score" placeholder="Select your persona" value="" style="display:none"></div>
+        <input type="submit" value="Generate" style="display:none">
     </div>
 {% endblock %}
