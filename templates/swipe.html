@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{% static "statement/css/swipestyle.css" %}">
     <link rel="stylesheet" href="{% static "statement/css/starrating.css" %}">
     <link rel="stylesheet" href="{% static "statement/css/jquery.mobile-1.4.4.min.css" %}">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <script src="{% static "statement/js/jquery-1.11.3.min.js" %}"></script>
     <script src="{% static "statement/js/jquery.mobile-1.4.4.min.js" %}"></script>
     <script src="{% static "statement/js/swipescript.js" %}"></script>
@@ -29,12 +30,18 @@
     {% for stock in all_stocks %}
     <div class="buddy" style="display: block;">
         <div style="display:none">{{ stock.pk }}</div>
-        {{  stock.ticker_name }}{{   stock.pk}}
-        <br>
-        <img id="logo"
-             src="{{   stock.logo_url }} "
-             alt="Logo" height="100" width="100">
-        <table class="line">
+       <table>
+            <tr>
+                <td style="font-weight: bold">{{ stock.ticker_name }}{{ stock.pk }} </td>
+                <td style="text-align: right">{{ stock.wkn }}</td>
+            </tr>
+           <tr> <td>
+                <img id="logo"
+                src="{{   stock.logo_url }} " alt="Logo" width="75%" > </td>
+               <td style="font-weight: bold; text-align: right">{{  stock.ticker }}</td>
+            </tr>
+        </table>
+         <table class="line">
             <tr>
                 <td class="subtitle">Return</td>
                 <td align="middle">{{   stock.stock_return }}</td>
