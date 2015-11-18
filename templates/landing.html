@@ -74,7 +74,7 @@
       background-position: 0 -26px
     }
 
-    #slides a:link,
+    /*#slides a:link,
     #slides a:visited {
       color: #333
     }
@@ -82,7 +82,7 @@
     #slides a:hover,
     #slides a:active {
       color: #9e2020
-    }
+    }*/
 
     .navbar {
       overflow: hidden
@@ -161,9 +161,9 @@
   <script>
     $(function() {
       $('#slides').slidesjs({
-        width: 720,
-        height: 1200,
-        navigation: true
+        width: $('#slides').innerWidth(),
+        /*height: $('#slides').innerHeight(),*/
+        navigation: false
       });
     });
   </script>
