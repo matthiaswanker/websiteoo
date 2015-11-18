@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4a4d974-22cb-4d78-8298-b56bb98e7682" name="Default" comment="new links tinder">
+    <list default="true" id="e4a4d974-22cb-4d78-8298-b56bb98e7682" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cerandi_app/static/statement/img/logos/logo_symbol.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/cerandi.iml" afterPath="$PROJECT_DIR$/.idea/cerandi.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/watchlist.html" afterPath="$PROJECT_DIR$/templates/watchlist.html" />
     </list>
@@ -70,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/templates/watchlist.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.734375">
-              <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
+              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1498,7 +1496,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447839630253</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="watchlist ohne message counter increase">
+      <created>1447842367141</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1447842367141</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1595,7 +1599,8 @@
     <MESSAGE value="updated persona selection" />
     <MESSAGE value="new links tinder" />
     <MESSAGE value="header to chat added&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="header to chat added&#10;" />
+    <MESSAGE value="watchlist ohne message counter increase" />
+    <option name="LAST_COMMIT_MESSAGE" value="watchlist ohne message counter increase" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1957,7 +1962,7 @@
     <entry file="file://$PROJECT_DIR$/templates/watchlist.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.734375">
-          <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding />
         </state>
       </provider>
