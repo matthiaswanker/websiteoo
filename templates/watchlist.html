@@ -1,0 +1,55 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static "statement/css/jquery.mobile-1.4.4.min.css" %}">
+    <link rel="stylesheet" href="{% static "statement/css/swipestyle.css" %}">
+    <link rel="stylesheet" href="{% static "statement/css/starrating.css" %}">
+    <script src="{% static "statement/js/jquery-1.11.3.min.js" %}"></script>
+    <script src="{% static "statement/js/jquery.mobile-1.4.4.min.js" %}"></script>
+    <script src="{% static "statement/js/swipescript.js" %}"></script>
+    <style>
+        td {
+            padding: 5px
+        }
+    </style>
+</head>
+<body style="">
+
+<div id="top_menu">
+    <p align="center"><img src="{% static "statement/img/logos/logo_complete.png" %}" alt="cerandi" width="40%">
+    </p>
+</div>
+<ol>
+{% for stock in stocks_invested %}
+    <li>{{ stock.ticker_name }}</li>
+{% endfor %}
+</ol>
+<div id="middle_part"></div>
+
+
+</div>
+
+<div id="bottom_menu" align="middle">
+    <a href="#"><img src="{% static "statement/img/bottom_menu/watchlist.png" %}" class="bottom_menu_button" alt="Watchlist"  width="14%"></a>
+    <a href="{{ request.path }}chat"><img src="{% static "statement/img/bottom_menu/messages.png" %}" class="bottom_menu_button" alt="Messages" width="14%"></a><div class="noti_bubble">0</div>
+    <a href="#"><img src="{% static "statement/img/bottom_menu/discover.png" %}" class="bottom_menu_button" alt="Discover"  width="14%"></a>
+    <a href="{% url 'logout' %}"><img src="{% static "statement/img/bottom_menu/logout.png" %}" class="bottom_menu_button" alt="Logout" width="14%"></a>
+</div>
+
+</body>
+
+<script language="javascript" type="text/javascript">
+    document.getElementById('button_dislike').addEventListener('click', function (e) {
+        document.getElementById("persona_score").setAttribute("value", "1");
+    });
+    document.getElementById('button_like').addEventListener('click', function (e) {
+        document.getElementById("persona_score").setAttribute("value", "2");
+    });
+);
+    </script>
+
+</html>

@@ -42,7 +42,11 @@ def mobileBrowser(request):
 def tinder(request,client_pk):
     stocks_left = Stock.objects.filter(~Q(investment__client__pk=client_pk))
     all_stocks = stocks_left
-    return render(request, 'swipe.html',{'all_stocks': all_stocks})
+    return render(request, 'swipe.html',{'all_stocks': all_stocks, "client": Client.objects.get(pk=client_pk)})
+
+def watchlist(request, client_pk):
+    stocks_invested = Stock.objects.filter(investment__client__pk=client_pk)
+    return render(request, "watchlist.html", {"stocks_invested": stocks_invested, "client": Client.objects.get(pk=client_pk)})
 
 def index_page(request):
     return render(request, 'landing.html')
