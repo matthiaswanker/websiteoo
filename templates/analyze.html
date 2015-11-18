@@ -7,7 +7,7 @@
     <script src="{% static 'senacor/js/ajax_profile_search.js'%}"> </script>
 
 
-    <h1 align="middle">Overview: <b>{{ client.first_name }} {{ client.last_name }}</b> | <img id="persona_image" src=
+    <h1 align="middle">Analysis results for: <b>{{ client.first_name }} {{ client.last_name }}</b> | <img id="persona_image" src=
             "{% if client.risk_ratio == 1 %} {% static "statement/img/personas/persona1.png"%}
              {% elif client.risk_ratio == 2 %} {% static "statement/img/personas/persona2.png"%}
              {% else %} {% static "statement/img/personas/persona3.png"%}
@@ -21,7 +21,7 @@
     <br>
     # Ordered by name
     <br>-->
-    <div style="float:left;width:45%;">
+    <div style="float:left; width:45%;">
         <div id="chosen_stocks">
             <h2 align="middle"> {{ client.first_name }} wants to invest in:</h2>
             <ol style="margin-left:35%;">

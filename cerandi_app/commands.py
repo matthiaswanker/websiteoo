@@ -10,7 +10,7 @@ import random
 #ID of the new user
 ########################
 def create_user(username):
-    email = "abc"
+    email = username +"@"+ username + ".de"
     post_data = '{"attributes": [{"label": "email","value": "'+ email +'"},{"label": "user name","value": "'+ username +'"}]}'
     response = requests.post('https://sentinel.apimanagement.hana.ondemand.com:443/api/watchlist_service/rest/users',
                          data=post_data,
@@ -51,6 +51,7 @@ def get_stock_facts(stock_id):
 #ID of the new watchlist
 ########################
 def create_watchlist(user_id, stock_ids):
+    stock_ids_formatted = [str(x) for x in stock_ids]
     post_data = '{"type": "compose","watchlist_name": '+ user_id +',"preferences": ' \
                 '{' \
                     '"exchange_id": "1",' \
@@ -64,14 +65,14 @@ def create_watchlist(user_id, stock_ids):
                     '"historical_periods": 3, ' \
                     '"lower_bound": 0.0, ' \
                     '"upper_bound": 1.0, ' \
-                    '"stocks": ' + str(stock_ids) + \
+                    '"stocks": ' + str(stock_ids_formatted) + \
                     '}' \
                 '}'
     response = requests.post('https://sentinel.apimanagement.hana.ondemand.com:443/api/watchlist_service/rest/users/'+ user_id +'/watchlists',
                              data=post_data,
                              allow_redirects=True,
                              headers={'api_key': 'Jds7JaVbE3alY4cVeEwWu2MRhLxWXKsG'})
-    assert response.status_code < 300
+    assert response.status_code < 300, str(stock_ids[0])
     response_json = json.loads(response.text)
     watchlist_url = response_json["data"]["location"]
     index = watchlist_url.find("rest/watchlists")+16
@@ -92,7 +93,7 @@ def optimize_watchlist(watchlist_id):
 def main():
     random.seed()
     user_id = create_user(str(random.randint(0, 1000)))
-    watchlist_id = create_watchlist(user_id, ["3", "4", "1", "37", "2", "5", "27"])
+    watchlist_id = create_watchlist(user_id, ["3", "5", "1", "37", "2", "38", "27", "28"])
     print watchlist_id
     optimize_watchlist(watchlist_id)
 
