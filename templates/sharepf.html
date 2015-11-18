@@ -6,22 +6,28 @@
 
 {% block content %}
 
-    <h1 align="center">Logout</h1>
 
+<div id="top_menu">
+    <p align="center"><img src="{% static "statement/img/logos/logo_complete.png" %}" alt="cerandi" width="40%">
+    </p>
+</div>
 
+<h1 style="margin-top: 30%" align="center">You Shared Your Portfolio</h1>
 
     {% csrf_token %}
     <div align="center" style="padding:15px">
-    <h2 style="margin-left: 5%;font-size: 30px">You Shared Your Portfolio</h2>
-<h3 style="margin-left: 5%;font-size: 30px">Several Financial Advisors will have a look at your Portfolio.
-Using SAP HANA they will help you out to improve your investments. Have a look at your chat. Someone wants to chat
-with you.</h3>
+
+<div style="margin-left: 5%;font-size: 15px">Our certified financial advisors will have a look at your portfolio.
+Using SAP HANA, they will help you improve your investments.
+with you.</div>
 
     </div>
 
-    <div align="center">
-    <a href="/login_form"><div style="padding:5px"><input width="50%" type="submit" value="Back to the beginning"></div></a>
-    </div>
-
+<div id="bottom_menu" align="middle">
+    <a href=""><img src="{% static "statement/img/bottom_menu/watchlist.png" %}" class="bottom_menu_button" alt="Watchlist"  width="14%"></a><div class="noti_bubble" id="watchlist_bubble">0</div>
+    <a href="./chat"><img src="{% static "statement/img/bottom_menu/messages.png" %}" class="bottom_menu_button" alt="Messages" width="14%"></a><div class="noti_bubble" id="messages_bubble">1</div>
+    <a href="../"><img src="{% static "statement/img/bottom_menu/discover.png" %}" class="bottom_menu_button" alt="Discover"  width="14%"></a>
+    <a href="/logout"><img src="{% static "statement/img/bottom_menu/logout.png" %}" class="bottom_menu_button" alt="Logout" width="14%"></a>
+</div>
 
 {% endblock %}

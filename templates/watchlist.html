@@ -29,10 +29,18 @@
     <div style="margin-left: 20%;"><input type="submit" value="{{ stock.ticker_name }}" width="55%"></div>
 {% endfor %}
 
-<div style="visibility: hidden;"><input type="submit" value="Share my Portfolio" width="55%"></div>
-<a href="{{ request.path }}/sharepf"><div style="margin-left: 20%"><input type="submit" value="Share my Portfolio" width="55%"></div></a>
+
+
+
+
+
 </div>
 </div>
+
+
+  <div align="center" width="40%">
+      <a href="./sharepf"><input type="submit" value="Share Portfolio"></a>
+  </div>
 
 <div id="bottom_menu" align="middle">
     <a href="#"><img src="{% static "statement/img/bottom_menu/watchlist.png" %}" class="bottom_menu_button" alt="Watchlist"  width="14%"><div class="noti_bubble" id="watchlist_bubble">0</div></a>

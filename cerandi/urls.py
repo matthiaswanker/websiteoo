@@ -22,7 +22,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$',index_page, name="index_page" ),
 
-     url(r'^client/(?P<client_pk>.*)/watchlist/sharepf$',views.sharepf, name="sharepf" ),
+    url(r'^client/(?P<client_pk>.*)/sharepf$',views.sharepf, name="sharepf" ),
     url(r'^client/(?P<client_pk>.*)/watchlist$',views.watchlist, name="watchlist" ),
     url(r'^client/(?P<client_pk>.*)/chat$',views.chat, name="chat" ),
     url(r'^client/(?P<client_pk>.*)/update/(?P<stock_pk>.*)/$',views.update_investment, name="update_investment" ),
