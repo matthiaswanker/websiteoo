@@ -14,9 +14,20 @@
     <div align="center">
         <h1>Tell us more about you - what's your attitude towards investment?</h1>
         <div>User ID: {{ new_Client.pk }}</div>
-        <div><img id="persona_image1" src="{% static "statement/img/personas/persona1.png"%}" alt="Persona 1" height="100" width="100"></div>
-        <div><img id="persona_image2" src="{% static "statement/img/personas/persona2.png"%}" alt="Persona 2" height="100" width="100"></div>
-        <div><img id="persona_image3" src="{% static "statement/img/personas/persona3.png"%}" alt="Persona 3" height="100" width="100"></di>
+        <table style="width:100%">
+            <tr>
+                <td><div><img id="persona_image1" src="{% static "statement/img/personas/persona1.png"%}" alt="Persona 1" height="100" width="100"></div></td>
+                <td>Lorem ipsum low risk person</td>
+            </tr>
+            <tr>
+                <td><div><img id="persona_image2" src="{% static "statement/img/personas/persona2.png"%}" alt="Persona 2" height="100" width="100"></div></td>
+                <td>Lorem ipsum medium risk person</td>
+            </tr>
+            <tr>
+                <td><div><img id="persona_image3" src="{% static "statement/img/personas/persona3.png"%}" alt="Persona 3" height="100" width="100"></div></td>
+                <td>Lorem ipsum high risk person</td>
+            </tr>
+        </table>
         <div><input  id="persona_score" type="text" name="persona_score" placeholder="Select your persona" value="" style="display:none"></div>
         <input type="submit" value="Generate" style="display:none">
     </div>
