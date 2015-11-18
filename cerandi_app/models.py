@@ -57,6 +57,7 @@ class Stock(models.Model):
     service_url = models.CharField(max_length=255, blank=True)
     stock_return = models.CharField(max_length=255, blank=True)
     stock_risk = models.CharField(max_length=255, blank=True)
+    stock_risk_text = models.CharField(max_length=255, blank=True)
     stock_innovation = models.CharField(max_length=255, blank=True)
     stock_innovation_text = models.CharField(max_length=255, blank=True)
     stock_sustainability = models.CharField(max_length=255, blank=True)

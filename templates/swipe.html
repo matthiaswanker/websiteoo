@@ -44,12 +44,12 @@
                 <td width="50%"> <img id="logo"
                 src="{{   stock.logo_url }} " alt="Logo" width="100%" ></td>
                 <td style="text-align: right">
-                <img id="logo"
-                src="{{   stock.industry }} " alt="Logo" width="100%" > </td>
+                <img id="service"
+                src="{{   stock.service_url }} " alt="Logo" width="100%" > </td>
             </tr>
            <tr>
-               <td style="font-weight: bold; font-size: 18pt">{{  stock.ticker }}</td>
-               <td style="text-align: right">{{ stock.wkn }}</td>
+               <td style="font-weight: bold; font-size: 18pt">{{   stock.ticker_name }}</td>
+               <td style="text-align: right"></td>
             </tr>
            <tr>
                <td>Facts:</td>
@@ -60,25 +60,25 @@
                 <td style="text-align: right">{{   stock.stock_return }}</td>
             </tr> -->
         </table>
-          <div class="skillbar clearfix " data-percent="100%">
+          <div class="skillbar clearfix " data-percent="{{   stock.stock_return }}0">
 	                <div class="skillbar-title" style="background: transparent;"><span>Return</span></div>
-	                <div class="skillbar-bar" style="background: #c2e1ff;"></div>
-	                <div class="skill-bar-percent">{{   stock.stock_return }}.00</div>
+	                <div class="skillbar-bar" style="background: #469FD8;"></div>
+	                <div class="skill-bar-percent">{{   stock.stock_return }}.33 %</div>
                     </div>
             <div class="skillbar clearfix " data-percent="{{   stock.stock_risk }}%">
 	                <div class="skillbar-title" style="background: transparent;"><span>Risk</span></div>
-	                <div class="skillbar-bar" style="background: #ffc1d0;"></div>
-	                <div class="skill-bar-percent">{{   stock.stock_risk }} %</div>
+	                <div class="skillbar-bar" style="background: #E94358;"></div>
+	                <div class="skill-bar-percent">{{   stock.stock_risk_text }}</div>
                     </div>
             <div class="skillbar clearfix " data-percent="{{   stock.stock_sustainability }}%">
 	                <div class="skillbar-title" style="background: transparent;"><span>Sustainability</span></div>
-	                <div class="skillbar-bar" style="background: #aaf0af;"></div>
-	                <div class="skill-bar-percent">{{   stock.stock_sustainability }} %</div>
+	                <div class="skillbar-bar" style="background: #8DC14F;"></div>
+	                <div class="skill-bar-percent">{{   stock.stock_sustainability_text }}</div>
                     </div>
             <div class="skillbar clearfix " data-percent="{{   stock.stock_innovation }}%">
 	                <div class="skillbar-title" style="background: transparent"><span>Innovation</span></div>
-	                <div class="skillbar-bar" style="background: #fffcb6;"></div>
-	                <div class="skill-bar-percent">{{   stock.stock_innovation }} %</div>
+	                <div class="skillbar-bar" style="background: #F59B29;"></div>
+	                <div class="skill-bar-percent">{{   stock.stock_innovation_text }}</div>
                     </div>
 
 
