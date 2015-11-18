@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4a4d974-22cb-4d78-8298-b56bb98e7682" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cerandi_app/static/statement/img/personas/persona1.png" afterPath="$PROJECT_DIR$/cerandi_app/static/statement/img/personas/persona1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cerandi_app/static/statement/img/personas/persona2.png" afterPath="$PROJECT_DIR$/cerandi_app/static/statement/img/personas/persona2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cerandi_app/static/statement/img/personas/persona3.png" afterPath="$PROJECT_DIR$/cerandi_app/static/statement/img/personas/persona3.png" />
+    <list default="true" id="e4a4d974-22cb-4d78-8298-b56bb98e7682" name="Default" comment="included notification bubble/counter for watchlist">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cerandi_app/static/statement/img/logos/logo_symbol.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/cerandi.iml" afterPath="$PROJECT_DIR$/.idea/cerandi.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cerandi_app/static/statement/css/swipestyle.css" afterPath="$PROJECT_DIR$/cerandi_app/static/statement/css/swipestyle.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cerandi_app/static/statement/js/swipescript.js" afterPath="$PROJECT_DIR$/cerandi_app/static/statement/js/swipescript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/swipe.html" afterPath="$PROJECT_DIR$/templates/swipe.html" />
     </list>
     <ignored path="cerandi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +38,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
-              <folding />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <marker date="1447799173892" expanded="true" signature="113:293" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -45,7 +51,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-              <folding />
+              <folding>
+                <marker date="1447799173891" expanded="true" signature="0:90" placeholder="import ..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,30 +62,39 @@
         <entry file="file://$PROJECT_DIR$/cerandi_app/commands.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="persona3.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/img/personas/persona3.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="swipe.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/swipe.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.6923075">
+              <caret line="86" column="179" selection-start-line="86" selection-start-column="179" selection-end-line="86" selection-end-column="179" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="persona1.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/img/personas/persona1.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="swipescript.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/js/swipescript.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.022106633">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="persona2.png" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/img/personas/persona2.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="swipestyle.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/css/swipestyle.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-18.115385">
+              <caret line="128" column="12" selection-start-line="128" selection-start-column="12" selection-end-line="128" selection-end-column="12" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -105,9 +122,9 @@
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/login_form.html" />
         <option value="$PROJECT_DIR$/templates/persona_score.html" />
-        <option value="$PROJECT_DIR$/cerandi_app/static/statement/js/swipescript.js" />
         <option value="$PROJECT_DIR$/templates/swipe.html" />
         <option value="$PROJECT_DIR$/cerandi_app/static/statement/css/swipestyle.css" />
+        <option value="$PROJECT_DIR$/cerandi_app/static/statement/js/swipescript.js" />
       </list>
     </option>
   </component>
@@ -117,9 +134,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="697" />
-    <option name="height" value="735" />
+    <option name="x" value="54" />
+    <option name="width" value="1554" />
+    <option name="height" value="907" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -147,6 +164,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -251,73 +269,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cerandi_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="statement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="personas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cerandi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cerandi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cerandi_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="statement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bottom_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cerandi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cerandi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="cerandi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -328,15 +285,15 @@
     <property name="recentsLimit" value="5" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\dev\cerandi\cerandi_app\static\statement\img\personas" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Phyton\cerandi\cerandi_app\static\statement\img\personas" />
       <recent name="D:\Phyton\cerandi\cerandi_app\static\statement\img" />
       <recent name="D:\Phyton\cerandi\cerandi_app\static\statement\js" />
       <recent name="D:\Phyton\cerandi\cerandi_app\static\statement\css" />
       <recent name="D:\Phyton\cerandi\cerandi_app\static\statement\font" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\dev\cerandi\cerandi_app\static\statement\img\personas" />
+      <recent name="D:\Phyton\cerandi\cerandi_app\static\statement" />
     </key>
   </component>
   <component name="RunManager" selected="Python.views">
@@ -741,10 +698,10 @@
       <updated>1447807795153</updated>
     </task>
     <task id="LOCAL-00029" summary="included notification bubble/counter for watchlist">
-      <created>1447809138156</created>
+      <created>1447809532842</created>
       <option name="number" value="00029" />
       <option name="project" value="LOCAL" />
-      <updated>1447809138156</updated>
+      <updated>1447809532842</updated>
     </task>
     <option name="localTasksCounter" value="30" />
     <servers />
@@ -759,30 +716,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="697" height="735" extended-state="0" />
-    <editor active="false" />
+    <frame x="54" y="0" width="1554" height="907" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.54631084" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25162548" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32649574" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873276" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3274559" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@cerandi" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32622334" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917705" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917705" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="manage.py@cerandi" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32649574" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -849,48 +806,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cerandi_app/commands.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/swipe.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="155" selection-start-line="87" selection-start-column="155" selection-end-line="87" selection-end-column="155" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/js/swipescript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/css/swipestyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/img/bottom_menu/logout.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cerandi_app/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1447799173892" expanded="true" signature="113:293" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -898,7 +821,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
+          <folding>
+            <marker date="1447799173891" expanded="true" signature="0:90" placeholder="import ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -938,7 +863,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="66" column="26" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1447799173892" expanded="true" signature="113:293" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -946,7 +874,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
+          <folding>
+            <marker date="1447799173891" expanded="true" signature="0:90" placeholder="import ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -977,6 +907,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -984,7 +915,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-          <folding />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1447799173892" expanded="true" signature="113:293" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -992,7 +926,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
+          <folding>
+            <marker date="1447799173891" expanded="true" signature="0:90" placeholder="import ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1015,7 +951,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-          <folding />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1447799173892" expanded="true" signature="113:293" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1023,8 +962,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1447799173891" expanded="true" signature="0:90" placeholder="import ..." />
+          </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/img/bottom_menu/watchlist.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/img/bottom_menu/messages.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/img/bottom_menu/logout.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/img/bottom_menu/discover.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/img/ico/favicon.ico">
@@ -1041,7 +1002,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
+          <folding>
+            <marker date="1447799173891" expanded="true" signature="0:90" placeholder="import ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1057,7 +1020,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1447799173892" expanded="true" signature="113:293" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1080,10 +1046,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cerandi_app/commands.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cerandi_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.2173913">
           <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1091,6 +1066,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4624506">
           <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1143,71 +1119,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/img/bottom_menu/discover.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/img/bottom_menu/logout.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/img/bottom_menu/messages.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/img/bottom_menu/watchlist.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/templates/swipe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.6923075">
+          <caret line="86" column="179" selection-start-line="86" selection-start-column="179" selection-end-line="86" selection-end-column="179" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/css/swipestyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29566854">
-          <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
+        <state vertical-scroll-proportion="-18.115385">
+          <caret line="128" column="12" selection-start-line="128" selection-start-column="12" selection-end-line="128" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/js/swipescript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23698384">
-          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.022106633">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/swipe.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2636535">
-          <caret line="87" column="155" selection-start-line="87" selection-start-column="155" selection-end-line="87" selection-end-column="155" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cerandi_app/commands.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/img/personas/persona3.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/img/personas/persona1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cerandi_app/static/statement/img/personas/persona2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
   </component>
