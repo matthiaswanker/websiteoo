@@ -40,14 +40,20 @@
         <div style="display:none">{{ stock.pk }}</div>
        <table width="100%">
             <tr>
-                <td style="font-weight: bold; font-size: 18pt">{{ stock.ticker_name }}{{ stock.pk }} </td>
+               <!-- <td width="50%" style="font-weight: bold; font-size: 18pt">{{ stock.ticker_name }}{{ stock.pk }} </td> -->
+                <td width="50%"> <img id="logo"
+                src="{{   stock.logo_url }} " alt="Logo" width="100%" ></td>
                 <td style="text-align: right">
                 <img id="logo"
-                src="{{   stock.logo_url }} " alt="Logo" height="40%" > </td>
+                src="{{   stock.industry }} " alt="Logo" width="100%" > </td>
             </tr>
            <tr>
-               <td style="font-weight: bold;">{{  stock.ticker }}</td>
+               <td style="font-weight: bold; font-size: 18pt">{{  stock.ticker }}</td>
                <td style="text-align: right">{{ stock.wkn }}</td>
+            </tr>
+           <tr>
+               <td>Facts:</td>
+               <td style="text-align: right">Values:</td>
             </tr>
           <!--  <tr>
                 <td class="subtitle">Return</td>
