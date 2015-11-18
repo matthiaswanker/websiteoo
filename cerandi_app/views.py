@@ -96,10 +96,14 @@ def client_list(request, advisor_pk):
 
 def client_detail(request, advisor_pk, client_pk):
     investments = Investment.objects.filter(client__pk = client_pk)
+    client = Client.objects.get(pk=client_pk)
+    chat_url = client.first_name+"_"+ client.last_name+"_"+client_pk
     return render(request, 'client_detail.html',
                   {'client': Client.objects.get(pk=client_pk),
                    'advisor': Advisor.objects.get(pk=advisor_pk),
-                   'investments': investments})
+                   'investments': investments,
+                   'chat_url': chat_url})
+
 
 def analyze_page(request, advisor_pk, client_pk):
     return render(request, 'logout.html')
