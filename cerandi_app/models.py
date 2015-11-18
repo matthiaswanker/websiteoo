@@ -53,10 +53,14 @@ class Stock(models.Model):
     index = models.CharField(max_length=255, blank=True)
     description = models.TextField(blank=True)
     logo_url = models.CharField(max_length=255, blank=True)
+    chart_url = models.CharField(max_length=255, blank=True)
+    service_url = models.CharField(max_length=255, blank=True)
     stock_return = models.CharField(max_length=255, blank=True)
     stock_risk = models.CharField(max_length=255, blank=True)
     stock_innovation = models.CharField(max_length=255, blank=True)
+    stock_innovation_text = models.CharField(max_length=255, blank=True)
     stock_sustainability = models.CharField(max_length=255, blank=True)
+    stock_sustainability_text = models.CharField(max_length=255, blank=True)
 
     def __unicode__(self):
         return self.ticker_name

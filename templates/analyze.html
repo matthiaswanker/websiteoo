@@ -7,7 +7,9 @@
     <script src="{% static 'senacor/js/ajax_profile_search.js'%}"> </script>
     <script src="{% static 'statement/js/balken.js'%}"> </script>
 
-
+<header id="header">
+            <h1 align="center"><img src="{% static "statement/img/logos/logo_complete.png"%}" alt="logo" align="center" width="20%"></h1>
+        </header>
     <h1 align="middle">Analysis results for: <b>{{ client.first_name }} {{ client.last_name }}</b> | <img id="persona_image" src=
             "{% if client.risk_ratio == 1 %} {% static "statement/img/personas/persona1.png"%}
              {% elif client.risk_ratio == 2 %} {% static "statement/img/personas/persona2.png"%}
@@ -22,53 +24,105 @@
     <br>
     # Ordered by name
     <br>-->
-    <div style="float:left; width:45%;">
-        <div id="chosen_stocks">
-            <h2 align="middle"> {{ client.first_name }} wants to invest in:</h2>
-            <ol style="margin-left:35%;">
-                {% for investment in investments %}
-                <li class="listing">
-                    <h3>{{ investment.stock.ticker_name }}</h3>
-                </li>
-                {% endfor %}
-            </ol>
-        </div>
 
-<ul class="skill-list">
+    <div style="float:left; width:45%;">
+
+    <h2 align="middle">{{ client.first_name }} Portfolio </h2>
+<ul style="margin-left:35%;" class="skill-list">
+    {% for investment in investments %}
   <li class="skill">
-    <h3>Possible return with trivial allocations:</h3>
-    <progress class="skill-1" max="100" value="50">
+    <h3>{{ investment.stock.ticker_name }}</h3>
+    <img src="{{ investment.stock.chart_url }}" width="100%"/>
+
+  </li>
+    {% endfor %}
+</ul>
+
+
+
+
+
+
+    <h2 align="middle">Return Analysis</h2>
+
+<ul style="margin-left:35%;" class="skill-list">
+  <li class="skill">
+    <h3>Naive Model</h3>
+    <progress class="skill-1" max="12" value="{{ estimated_return }}">
       <strong>Current Total: 200000</strong>
     </progress>
   </li>
-    <h3>Possible return with SAP trading strategies:</h3>
+    <li class="skill">
+    <h3>{{ client.first_name }} Strategy</h3>
+    <progress class="skill-1" max="12" value="{{ estimated_return }}">
+      <strong>Current Total: 200000</strong>
+    </progress>
+  </li>
+    <h3>Optimized Strategy</h3>
   <li class="skill">
-    <progress class="skill-2" max="100" value="75">
+    <progress class="skill-1" max="12" value="{{ allocation_optimized }}">
       <strong>Skill Level: 75%</strong>
     </progress>
   </li>
 </ul>
+
+        <h2 align="middle">Risk Analysis</h2>
+
+<ul style="margin-left:35%;" class="skill-list">
+  <li class="skill">
+    <h3>Naive Model</h3>
+    <progress class="skill-4" max="100" value="{{ estimated_return }}1">
+      <strong>Current Total: 200000</strong>
+    </progress>
+  </li>
+    <li class="skill">
+    <h3>{{ client.first_name }} Strategy</h3>
+    <progress class="skill-3" max="100" value="{{ estimated_return }}9">
+      <strong>Current Total: 200000</strong>
+    </progress>
+  </li>
+    <h3>Optimized Strategy</h3>
+  <li class="skill">
+    <progress class="skill-2" max="100" value="1{{ allocation_optimized }}">
+      <strong>Skill Level: 75%</strong>
+    </progress>
+  </li>
+</ul>
+
+    <h2 align="middle">Evaluation</h2>
+
+<ul style="margin-left:35%;" class="skill-list">
+  <li class="skill">
+    <h3>Maximum Drawdown</h3>
+    <progress class="skill-6" max="100" value="{{ estimated_return }}">
+      <strong>Current Total: 200000</strong>
+    </progress>
+  </li>
+    <li class="skill">
+    <h3>Alpha</h3>
+    <progress class="skill-6" max="100" value="{{ estimated_return }}4">
+      <strong>Current Total: 200000</strong>
+    </progress>
+  </li>
+    <h3>Beta</h3>
+  <li class="skill">
+    <progress class="skill-5" max="100" value="1{{ allocation_optimized }}">
+      <strong>Skill Level: 75%</strong>
+    </progress>
+  </li>
+</ul>
+
     </div>
+
+
+
     <div style="float:right; width:45%; margin-left:10px;">
         <div id="chat" align="middle" style="height:100%;">
             <h2>Chat with {{ client.first_name }}:</h2>
-            <div id="tlkio" data-channel="{{ chat_url }}" data-custom-css="http://helm.bplaced.net/chat.css" style="width:100%;height:300px;"></div>
+            <div id="tlkio" data-channel="{{ chat_url }}" data-custom-css="http://helm.bplaced.net/chat.css" style="width:100%;height:400px;"></div>
             <script async src="http://tlk.io/embed.js" type="text/javascript"></script>
         </div>
     </div>
-    <footer style="height:120px;">
-        <form action="{% url 'analyze' advisor_pk=advisor.pk client_pk=client.pk %}" method="post">
-            {% csrf_token %}
-            <div style="float:left;margin-left:20%;">
-                <div style="padding:40px"><input class="button-primary" type="submit" value="Analyze the watchlist!"></div>
-            </div>
-        </form>
-        <form action="{% url 'client_list' advisor_pk=advisor.pk %}" method="get">
-            {% csrf_token %}
-            <div style="float:right;margin-right:20%;">
-                <div style="padding:40px"><input class="button" type="submit" value="Back to the overview!"></div>
-            </div>
-        </form>
-    </footer>
+
 
 {% endblock %}

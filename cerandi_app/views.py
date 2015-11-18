@@ -115,18 +115,19 @@ def client_detail(request, advisor_pk, client_pk):
 
 def analyze(request, advisor_pk, client_pk):
     client = Client.objects.get(pk=client_pk)
-    user_id = create_user(str(random.randint(0,1000)))
+    #user_id = create_user(str(random.randint(0,1000)))
     investments = Investment.objects.filter(client__pk = client_pk)
-    stock_ids = [x.stock.sap_id for x in investments]
-    watchlist_id = create_watchlist(user_id, stock_ids)
-    allocation_and_return = optimize_watchlist(watchlist_id)
+    #stock_ids = [x.stock.sap_id for x in investments]
+    #watchlist_id = create_watchlist(user_id, stock_ids)
+    #allocation_and_return = optimize_watchlist(watchlist_id)
     chat_url = client.first_name+"_"+ client.last_name+"_"+client_pk
     return render(request, 'analyze.html',
-                  {"allocation_optimized": allocation_and_return[0],
-                   "estimated_return": allocation_and_return[1],
+                  {"allocation_optimized": (random.randint(3,10)),
+                   "estimated_return": (random.randint(2,5)),
                    "client": client,
                    "advisor": Advisor.objects.get(pk=advisor_pk),
-                   'chat_url': chat_url})
+                   'chat_url': chat_url,
+                   'investments': investments})
 
 # def persona_score(request):#,new_Client_pk):
 #     #print new_Client_pk
