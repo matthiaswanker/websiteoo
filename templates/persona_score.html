@@ -6,26 +6,37 @@
 
 
 
-
+<style>
+.top_row {
+    padding-bottom: .25em;
+}
+.middle_row {
+    padding-top: .25em;
+    padding-bottom: .25em;
+}
+.bottom_row {
+    padding-top: .25em;
+}
+</style>
 
 
     <form action="{% url 'persona_score' %}" method="post" id="persona">
     {% csrf_token %}
     <div align="center">
         <h1>Tell us more about you - what's your attitude towards investment?</h1>
-        <div>User ID: {{ new_Client.pk }}</div>
-        <table style="width:100%">
-            <tr>
-                <td><div><img id="persona_image1" src="{% static "statement/img/personas/persona1.png"%}" alt="Persona 1" height="100" width="100"></div></td>
-                <td>Lorem ipsum low risk person</td>
+        <div><br></div>
+        <table style="width:90%">
+            <tr id="persona_type1" style="border:groove">
+                <td class="top_row"><div><img src="{% static "statement/img/personas/persona1.png"%}" alt="Persona 1" width="100"></div></td>
+                <td class="top_row">Lorem ipsum low risk person</td>
             </tr>
-            <tr>
-                <td><div><img id="persona_image2" src="{% static "statement/img/personas/persona2.png"%}" alt="Persona 2" height="100" width="100"></div></td>
-                <td>Lorem ipsum medium risk person</td>
+            <tr id="persona_type2" style="border:groove">
+                <td class="middle_row"><div><img src="{% static "statement/img/personas/persona2.png"%}" alt="Persona 2" width="100"></div></td>
+                <td class="middle_row">Lorem ipsum medium risk person</td>
             </tr>
-            <tr>
-                <td><div><img id="persona_image3" src="{% static "statement/img/personas/persona3.png"%}" alt="Persona 3" height="100" width="100"></div></td>
-                <td>Lorem ipsum high risk person</td>
+            <tr id="persona_type3" style="border:groove">
+                <td class="bottom_row"><div><img src="{% static "statement/img/personas/persona3.png"%}" alt="Persona 3" width="100"></div></td>
+                <td class="bottom_row">Lorem ipsum high risk person</td>
             </tr>
         </table>
         <div><input  id="persona_score" type="text" name="persona_score" placeholder="Select your persona" value="" style="display:none"></div>
@@ -37,15 +48,15 @@
 </div>
 
         <script language="javascript" type="text/javascript">
-    document.getElementById('persona_image1').addEventListener('click', function (e) {
+    document.getElementById('persona_type1').addEventListener('click', function (e) {
         document.getElementById("persona_score").setAttribute("value", "1");
         document.forms["persona"].submit();
     });
-    document.getElementById('persona_image2').addEventListener('click', function (e) {
+    document.getElementById('persona_type2').addEventListener('click', function (e) {
         document.getElementById("persona_score").setAttribute("value", "2");
         document.forms["persona"].submit();
     });
-    document.getElementById('persona_image3').addEventListener('click', function (e) {
+    document.getElementById('persona_type3').addEventListener('click', function (e) {
         document.getElementById("persona_score").setAttribute("value", "3");
         document.forms["persona"].submit();
     });

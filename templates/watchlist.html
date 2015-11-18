@@ -19,23 +19,36 @@
 </head>
 <body style="">
 
+<div id="top_menu">
+    <p align="center"><img src="{% static "statement/img/logos/logo_complete.png" %}" alt="cerandi" width="40%">
+    </p>
+</div>
 
-<div id="tlkio" data-channel="{{ chat_url }}" data-custom-css="http://helm.bplaced.net/chat.css" style="width:100%;height:50%;"></div>
-<script async src="http://tlk.io/embed.js" type="text/javascript"></script>
+<div id="middle_part"></div><div id="container">
+<ol>
+{% for stock in stocks_invested %}
+    <li>{{ stock.ticker_name }}</li>
+{% endfor %}
+</ol>
+</div>
 
 <div id="bottom_menu" align="middle">
-    <a href=""><img src="{% static "statement/img/bottom_menu/watchlist.png" %}" class="bottom_menu_button" alt="Watchlist"  width="14%"></a>
+    <a href="#"><img src="{% static "statement/img/bottom_menu/watchlist.png" %}" class="bottom_menu_button" alt="Watchlist"  width="14%"></a>
     <a href="{{ request.path }}chat"><img src="{% static "statement/img/bottom_menu/messages.png" %}" class="bottom_menu_button" alt="Messages" width="14%"></a><div class="noti_bubble">0</div>
     <a href="#"><img src="{% static "statement/img/bottom_menu/discover.png" %}" class="bottom_menu_button" alt="Discover"  width="14%"></a>
-    <a href="#"><img src="{% static "statement/img/bottom_menu/logout.png" %}" class="bottom_menu_button" alt="Logout" width="14%"></a>
-</div>
+    <a href="{% url 'logout' %}"><img src="{% static "statement/img/bottom_menu/logout.png" %}" class="bottom_menu_button" alt="Logout" width="14%"></a>
+</div></div>
 
 </body>
 
-
+<script language="javascript" type="text/javascript">
+    document.getElementById('button_dislike').addEventListener('click', function (e) {
+        document.getElementById("persona_score").setAttribute("value", "1");
+    });
+    document.getElementById('button_like').addEventListener('click', function (e) {
+        document.getElementById("persona_score").setAttribute("value", "2");
+    });
+);
+    </script>
 
 </html>
-
-
-
-
