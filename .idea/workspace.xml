@@ -77,8 +77,8 @@
       <file leaf-file-name="persona_score.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/persona_score.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8183594">
-              <caret line="43" column="147" selection-start-line="43" selection-start-column="147" selection-end-line="43" selection-end-column="147" />
+            <state vertical-scroll-proportion="0.35351562">
+              <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -194,6 +194,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="cerandi_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cerandi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cerandi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cerandi_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -768,7 +786,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447835417190</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="updated persona texts">
+      <created>1447837731115</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1447837731115</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView">
@@ -863,7 +887,8 @@
     <MESSAGE value="added functionality to like and dislike buttons" />
     <MESSAGE value="included notification bubble/counter for watchlist" />
     <MESSAGE value="updated persona selection" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated persona selection" />
+    <MESSAGE value="updated persona texts" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated persona texts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1210,8 +1235,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/persona_score.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8183594">
-          <caret line="43" column="147" selection-start-line="43" selection-start-column="147" selection-end-line="43" selection-end-column="147" />
+        <state vertical-scroll-proportion="0.35351562">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
           <folding />
         </state>
       </provider>
