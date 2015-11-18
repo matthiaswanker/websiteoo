@@ -66,11 +66,13 @@ def logout(request):
     return render(request, 'logout.html')
 
 def register_user(request):
+    items = ['63065', '60311', '64283']
     first_name = request.POST['first_name']
     last_name = request.POST["last_name"]
     new_Client = Client()
     new_Client.first_name = first_name
     new_Client.last_name = last_name
+    new_Client.plz_location = random.choice(items)
     new_Client.save()
     request.session['new_client'] = new_Client.pk
     return render(request,'persona_score.html',{'new_Client' : new_Client})
@@ -95,7 +97,7 @@ def update_investment(request,client_pk,stock_pk):
 
 #no plz filtering implemented
 def client_list(request, advisor_pk):
-    all_clients = Client.objects.all()
+    all_clients = Client.objects.all().order_by('-plz_location')
     return render(request, 'client_list.html',
                   {'all_clients': all_clients,
                    'advisor': Advisor.objects.get(pk=advisor_pk)})
