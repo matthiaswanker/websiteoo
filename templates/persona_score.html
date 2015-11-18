@@ -24,32 +24,37 @@
 }
 </style>
 
-    <header id="header">
-            <h1 align="center"><img src="{% static "statement/img/logos/logo_complete.png"%}" alt="logo" align="center" width="50%"></h1>
-        </header>
+
+            <p align="center"><img src="{% static "statement/img/logos/logo_complete.png"%}" alt="logo" align="center" width="50%"></p>
 
 
     <form action="{% url 'persona_score' %}" method="post" id="persona">
     {% csrf_token %}
     <div align="center">
         <h1>Tell us more about you. What's your attitude towards investment?</h1>
-        <div><br></div>
-        <table style="width:90%">
+        <div ><br></div>
+        <font color="#FFFFFF">
+        <table style="width:90%" border="0">
             <tr id="persona_type1" style="border:groove">
-                <td class="top_row"><div><img src="{% static "statement/img/personas/persona1.png"%}" alt="Persona 1" width="100"></div></td>
-                <td class="textfield" class="top_row">Tim, 30. Freshly married, starting a family. Needs safe investments to pay for kids' college.</td>
-            </tr>
-            <tr id="persona_type2" style="border:groove">
-                <td class="middle_row"><div><img src="{% static "statement/img/personas/persona2.png"%}" alt="Persona 2" width="100"></div></td>
-                <td class="textfield" class="middle_row" >Jason, 24. Just finished Uni. Wants to get a cool new car in a few years. Wants reasonable risk and return. </td>
-            </tr>
-            <tr id="persona_type3" style="border:groove">
-                <td class="bottom_row"><div><img src="{% static "statement/img/personas/persona3.png"%}" alt="Persona 3" width="100"></div></td>
-                <td class="textfield" class="bottom_row">Anthony, 28. Loves his work and makes a lot of money. Doesn't mind taking risks to maximize profits.</td>
+                <td  bgcolor="#8DC14F" class="top_row"><div><img src="{% static "statement/img/personas/persona1.png"%}" alt="Persona 1" width="100"></div></td>
+                <td  bgcolor="#8DC14F" class="textfield" class="top_row">Tim, 30. Freshly married, starting a family. Needs safe investments to pay for kids' college.</td>
             </tr>
         </table>
+        <table style="width:90%">
+            <tr id="persona_type2" style="border:groove">
+                <td bgcolor="#F59B29" class="middle_row"><div><img src="{% static "statement/img/personas/persona2.png"%}" alt="Persona 2" width="100"></div></td>
+                <td bgcolor="#F59B29" class="textfield" class="middle_row" >Jason, 24. Just finished Uni. Wants to get a cool new car in a few years. Wants reasonable risk and return. </td>
+            </tr>
+        </table>
+        <table style="width:90%">
+            <tr id="persona_type3" style="border:groove">
+                <td bgcolor="#E94358" class="bottom_row"><div><img src="{% static "statement/img/personas/persona3.png"%}" alt="Persona 3" width="100"></div></td>
+                <td bgcolor="#E94358" class="textfield" class="bottom_row">Anthony, 28. Loves his work and makes a lot of money. Doesn't mind taking risks to maximize profits.</td>
+            </tr>
+        </table></font>
         <div><input  id="persona_score" type="text" name="persona_score" placeholder="Select your persona" value="" style="display:none"></div>
         <input type="submit" value="Generate" style="display:none">
+
     </div>
     </form>
     <!--<div style="padding: 5em;"><a href="/tags">Andere Bist-Du-Nicht Fragen </a></div>-->

@@ -1,5 +1,5 @@
-
 #container {
+  font-family: "Raleway", Arial, Serif;
   width: 80%;
   /*margin: auto !important;*/
   display: block;
@@ -15,6 +15,7 @@
   user-select: none;
 }
 .buddy {
+  font-family: "Raleway", Arial, Serif;
   display: none;
   background: #fff;
   border-radius: 10px;
@@ -52,6 +53,9 @@
   background-size: 100% auto !important;
   background-position: center;
  background-repeat: no-repeat;
+}
+h3 {
+    font-family: "Raleway", Arial, Serif;
 }
 .like {
   border-radius: 5px;
