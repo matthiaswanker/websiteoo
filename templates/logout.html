@@ -1,7 +1,12 @@
 {% extends "base.html" %}
+
 {% load staticfiles %}
 
 {% block content %}
+
+<header id="header">
+            <h1 align="center"><img src="{% static "statement/img/logos/logo_complete.png"%}" alt="logo" align="center" width="20%"></h1>
+</header>
 
     <h1 align="center">Logout</h1>
 
@@ -13,7 +18,7 @@
     </div>
 
     <div align="center">
-    <a href="/login_form"><div style="padding:5px"><input width="50%" type="submit" value="Back to the beginning"></div></a>
+    <a href="/login_form"><div style="padding:5px"><input width="20%" type="submit" value="Back to the beginning"></div></a>
     </div>
 
 
