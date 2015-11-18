@@ -77,8 +77,8 @@
             </tr>
         </table>
         <p id="description_paragraph">{{   i.description }}</p>
-        <img class="button_dislike" src="{% static "statement/img/35px-X_mark.svg.png" %}" alt="Dislike!" height="20" width="20" align="left">
-        <img class="button_like" src="{% static "statement/img/35px-Yes_check.svg.png" %}" alt="Like!" height="20" width="20" align="right">
+        <img id="button_dislike" src="{% static "statement/img/35px-X_mark.svg.png" %}" alt="Dislike!" height="20" width="20" align="left">
+        <img id="button_like" src="{% static "statement/img/35px-Yes_check.svg.png" %}" alt="Like!" height="20" width="20" align="right">
     </div>
     {% endfor %}
 </div>
@@ -99,7 +99,6 @@
     document.getElementById('button_like').addEventListener('click', function (e) {
         document.getElementById("persona_score").setAttribute("value", "2");
     });
-);
     </script>
 
 </html>
