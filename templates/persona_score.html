@@ -17,26 +17,31 @@
 .bottom_row {
     padding-top: .25em;
 }
+.textfield {
+    padding-left:5px;
+    font-size:12px;
+    line-height:1.25;
+}
 </style>
 
 
     <form action="{% url 'persona_score' %}" method="post" id="persona">
     {% csrf_token %}
     <div align="center">
-        <h1>Tell us more about you - what's your attitude towards investment?</h1>
+        <h1>Tell us more about you. What's your attitude towards investment?</h1>
         <div><br></div>
         <table style="width:90%">
             <tr id="persona_type1" style="border:groove">
                 <td class="top_row"><div><img src="{% static "statement/img/personas/persona1.png"%}" alt="Persona 1" width="100"></div></td>
-                <td class="top_row">Lorem ipsum low risk person</td>
+                <td class="textfield" class="top_row">Tim, 30. Freshly married, starting a family. Doesn't care about maximizing profits - needs safe investments to pay for kids' college.</td>
             </tr>
             <tr id="persona_type2" style="border:groove">
                 <td class="middle_row"><div><img src="{% static "statement/img/personas/persona2.png"%}" alt="Persona 2" width="100"></div></td>
-                <td class="middle_row">Lorem ipsum medium risk person</td>
+                <td class="textfield" class="middle_row" >Jason, 24. Just finished Uni. Wants to get a cool new car in a few years. Doesn't mind a little risk to get higher returns. </td>
             </tr>
             <tr id="persona_type3" style="border:groove">
                 <td class="bottom_row"><div><img src="{% static "statement/img/personas/persona3.png"%}" alt="Persona 3" width="100"></div></td>
-                <td class="bottom_row">Lorem ipsum high risk person</td>
+                <td class="textfield" class="bottom_row">Anthony, 28. Loves his work and makes a lot of money he doesn't spend. Doesn't mind larger taking risks to maximize profits.</td>
             </tr>
         </table>
         <div><input  id="persona_score" type="text" name="persona_score" placeholder="Select your persona" value="" style="display:none"></div>
