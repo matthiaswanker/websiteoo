@@ -27,7 +27,7 @@ urlpatterns = [
     url(r'^client/(?P<client_pk>.*)/update/(?P<stock_pk>.*)/$',views.update_investment, name="update_investment" ),
     url(r'^client/(?P<client_pk>.*)/$',views.tinder, name="tinder" ),
 
-    url(r'^advisor/(?P<advisor_pk>.*)/client/(?P<client_pk>.*)/analyze/$', views.analyze_page, name="analyze_page"),
+    url(r'^advisor/(?P<advisor_pk>.*)/client/(?P<client_pk>.*)/analyze/$', views.analyze, name="analyze"),
     url(r'^advisor/(?P<advisor_pk>.*)/client/(?P<client_pk>.*)/$',views.client_detail, name="client_detail"),
     url(r'^advisor/(?P<advisor_pk>.*)/$',views.client_list, name="client_list"),
 
