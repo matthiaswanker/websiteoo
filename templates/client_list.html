@@ -22,6 +22,11 @@
         <ul>
         {% for client in all_clients %}
         <li class="listing">
+            <img id="persona_image" src=
+            "{% if client.risk_ratio == 1 %} {% static "statement/img/personas/persona1.png"%}
+             {% elif client.risk_ratio == 2 %} {% static "statement/img/personas/persona2.png"%}
+             {% else %} {% static "statement/img/personas/persona3.png"%}
+             {% endif %}" alt="Persona 1" height="50" width="50">
             <a href="{% url 'client_detail' advisor_pk=advisor.pk client_pk=client.pk %}">{{ client.last_name }}, {{ client.first_name }}</a>
         </li>
         {% endfor %}
