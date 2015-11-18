@@ -30,19 +30,16 @@
         </div>
     </div>
     <div style="float:right; width:45%; margin-left:10px;">
-        <div id="chosen_stocks" align="middle">
-                <ul align="middle">
-                    <li class="listing">
-                        <h2>Chat with {{ client.first_name }}</h2>
-                    </li>
-                </ul>
-            </div>
+        <div id="chat" align="middle">
+            <h2>Chat with {{ client.first_name }}</h2>
+
+        </div>
     </div>
     <footer>
         <form action="{% url 'analyze_page' advisor_pk=advisor.pk client_pk=client.pk %}" method="post">
             {% csrf_token %}
             <div align="center">
-                <div style="padding:5px"><input type="submit" value="Analyze this shit!"></div>
+                <div style="padding:40px"><input class="button-primary" type="submit" value="Analyze this shit!"></div>
             </div>
         </form>
     </footer>
