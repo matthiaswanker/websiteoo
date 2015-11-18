@@ -17,23 +17,34 @@
     <br>
     # Ordered by name
     <br>-->
-    <table style="width:100%">
-        <tr>
-            <div id="chosen_stocks" align="left">
-                <ul align="middle">
+    <div style="float:left; width:45%;">
+        <div id="chosen_stocks">
+            <h2 align="middle"> {{ client.first_name }} wants to invest in:</h2>
+            <ol style="margin-left:35%;">
+                {% for investment in investments %}
                 <li class="listing">
-                    blubb
+                    <h3>{{ investment.stock.ticker_name }}</h3>
                 </li>
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
+    <div style="float:right; width:45%; margin-left:10px;">
+        <div id="chosen_stocks" align="middle">
+                <ul align="middle">
+                    <li class="listing">
+                        <h2>Chat with {{ client.first_name }}</h2>
+                    </li>
                 </ul>
             </div>
-        </tr>
-        <tr>
-            <div id="chosen_stocks" align="left">
-                <ul align="middle">
-                <li class="listing">
-                    blubb
-                </li>
-                </ul>
-            </div></tr>
-    </table>
+    </div>
+    <footer>
+        <form action="{% url 'analyze_page' advisor_pk=advisor.pk client_pk=client.pk %}" method="post">
+            {% csrf_token %}
+            <div align="center">
+                <div style="padding:5px"><input type="submit" value="Analyze this shit!"></div>
+            </div>
+        </form>
+    </footer>
+
 {% endblock %}
