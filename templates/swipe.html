@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{% static "statement/css/starrating.css" %}">
     <link rel="stylesheet" href="{% static "statement/css/stylebar.css" %}">
 
-    <!-- Eventuell optional: -->
+    <!-- Eventuell optional: --> 
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
 
@@ -42,15 +42,15 @@
             <tr>
                <!-- <td width="50%" style="font-weight: bold; font-size: 18pt">{{ stock.ticker_name }}{{ stock.pk }} </td> -->
                 <td width="50%"> <img id="logo"
-                src="{{   stock.logo_url }} " alt="Logo" width="100%" ></td>
+                src="{{   stock.service_url }} " alt="Logo" width="100%" ></td>
                 <td style="text-align: right">
                 <img id="service"
-                src="{{   stock.service_url }} " alt="Logo" width="100%" > </td>
+                src="{{  stock.logo_url  }} " alt="Logo" width="100%" > </td>
             </tr>
-           <tr>
-               <td style="font-weight: bold; font-size: 18pt">{{   stock.ticker_name }}</td>
+          <!-- <tr>
+               <td style="font-weight: bold; font-size: 18pt"></td>
                <td style="text-align: right"></td>
-            </tr>
+            </tr> -->
            <tr>
                <td>Facts:</td>
                <td style="text-align: right">Values:</td>
@@ -60,10 +60,10 @@
                 <td style="text-align: right">{{   stock.stock_return }}</td>
             </tr> -->
         </table>
-          <div class="skillbar clearfix " data-percent="{{   stock.stock_return }}0">
+          <div class="skillbar clearfix " data-percent="{{   stock.stock_return }}0%">
 	                <div class="skillbar-title" style="background: transparent;"><span>Return</span></div>
 	                <div class="skillbar-bar" style="background: #469FD8;"></div>
-	                <div class="skill-bar-percent">{{   stock.stock_return }}.33 %</div>
+	                <div class="skill-bar-percent">{{   stock.stock_return }}%</div>
                     </div>
             <div class="skillbar clearfix " data-percent="{{   stock.stock_risk }}%">
 	                <div class="skillbar-title" style="background: transparent;"><span>Risk</span></div>
