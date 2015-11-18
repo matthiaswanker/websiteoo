@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
     $(".buddy").on("swiperight",function(){
+        var counterValue = parseInt($('.noti_bubble').html());
       $(this).addClass('rotate-left').delay(700).fadeOut(1);
       $('.buddy').find('.status').remove();
         var index = document.URL.search("client/[0-9]+") + 7;
@@ -8,6 +9,7 @@ $(document).ready(function(){
         //alert(user_id);
       $.get("update/"+$(this).children("div:first").text());
       $(this).append('<div class="status like">Like!</div>');
+        $('.noti_bubble').html((counterValue+1));
       /*if ( $(this).is(':last-child') ) {
         $('.buddy:nth-child(1)').removeClass ('rotate-left rotate-right').fadeIn(300);
        } else {
@@ -28,6 +30,7 @@ $(document).ready(function(){
   });
 
      $(".button_like").on("click",function(){
+         var counterValue = parseInt($('.noti_bubble').html());
       $(this).parent().addClass('rotate-left').delay(700).fadeOut(1);
       $('.buddy').find('.status').remove();
         var index = document.URL.search("client/[0-9]+") + 7;
@@ -35,6 +38,7 @@ $(document).ready(function(){
         //alert(user_id);
       $.get("update/"+$(this).parent().children("div:first").text());
       $(this).parent().append('<div class="status like">Like!</div>');
+         $('.noti_bubble').html((counterValue+1));
       /*if ( $(this).is(':last-child') ) {
         $('.buddy:nth-child(1)').removeClass ('rotate-left rotate-right').fadeIn(300);
        } else {
