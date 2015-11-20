@@ -79,7 +79,7 @@ def register_user(request):
 
 def persona_score(request):
     new_Client = request.session.get('new_client', None)
-    print new_Client
+    #print new_Client
     new_Client = Client.objects.get(pk=new_Client)
     new_Client.risk_ratio = request.POST['persona_score']
     new_Client.save()
