@@ -27,16 +27,6 @@
 
     <div style="float:left; width:45%;">
 
-    <h2 align="middle">{{ client.first_name }} Portfolio </h2>
-<ul style="margin-left:35%;" class="skill-list">
-    {% for investment in investments %}
-  <li class="skill">
-    <h3>{{ investment.stock.ticker_name }}</h3>
-    <img src="{{ investment.stock.chart_url }}" width="100%"/>
-
-  </li>
-    {% endfor %}
-</ul>
 
 
 
@@ -110,6 +100,19 @@
       <strong>Skill Level: 75%</strong>
     </progress>
   </li>
+</ul>
+
+
+
+    <h2 align="middle">{{ client.first_name }} Portfolio </h2>
+<ul style="margin-left:35%;" class="skill-list">
+    {% for investment in investments %}
+  <li class="skill">
+    <h3>{{ investment.stock.ticker_name }}</h3>
+    <img src="{{ investment.stock.chart_url }}" width="100%"/>
+
+  </li>
+    {% endfor %}
 </ul>
 
     </div>
