@@ -5,7 +5,7 @@
   display: block;
   height: 60%;
   position: absolute;
-  top: 8%;
+  top: 15%;
   list-style-type: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -24,7 +24,7 @@
   padding: 5%;
   width: 100%;
   height: auto;
-  top: 10%;
+  top: 14%;
   left: 7.5%;
   position: absolute;
   cursor: hand;
