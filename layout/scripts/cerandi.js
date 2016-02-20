@@ -30,6 +30,29 @@ function timeStamp() {
 
 
 
+function getJSONP(url, success) {
+
+    var ud = '_' + +new Date,
+        script = document.createElement('script'),
+        head = document.getElementsByTagName('head')[0] 
+               || document.documentElement;
+
+    window[ud] = function(data) {
+        head.removeChild(script);
+        success && success(data);
+    };
+
+    script.src = url.replace('callback=?', 'callback=' + ud);
+    head.appendChild(script);
+
+}
+
+ 
+
+
+
+
+
 
 var yourapp=navigator.appName;
 var userAgent=navigator.userAgent;
@@ -46,7 +69,7 @@ var innerHeight=window.innerHeight;
 var previousURL=document.referrer;
 console.log('Referrer '+document.referrer);
 
-var browserInfo= timeStamp()+'previousURL='+previousURL+'yourapp='+yourapp+'userAgent='+userAgent+'appVersion='+appVersion+'appCodeName='+appCodeName+'platform='+platform+'oscpu='+oscpu+'cookieEnabled='+cookieEnabled+'outerWidth='+outerWidth+'outerHeight='+outerHeight+'=innerWidth'+innerWidth+'innerHeight='+innerHeight;
+var browserInfo= timeStamp()+'=previousURL=='+previousURL+'yourapp='+yourapp+'userAgent='+userAgent+'appVersion='+appVersion+'appCodeName='+appCodeName+'platform='+platform+'oscpu='+oscpu+'cookieEnabled='+cookieEnabled+'outerWidth='+outerWidth+'outerHeight='+outerHeight+'=innerWidth'+innerWidth+'innerHeight='+innerHeight;
 console.log(browserInfo);
 
 function randomString() {
@@ -251,6 +274,14 @@ $(function() {
     });
 });
 
+
+/***************************************
+* User IP
+*/
+
+getJSONP('http://jsonip.com?callback=?', function(data){
+	send_on_page_data("=IPadress=="+data.ip,UserID)
+}); 
 
 
 /***************************************
