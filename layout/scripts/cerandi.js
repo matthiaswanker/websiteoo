@@ -247,3 +247,31 @@ $(function() {
     });
 });
 
+
+
+/***************************************
+* LINK LISTENER
+*/
+
+var arrayWithElements = new Array();
+
+document.onclick = clickListener;
+
+
+function clickListener(e) 
+{   
+    var clickedElement=(window.event)
+                        ? window.event.srcElement
+                        : e.target,
+        tags=document.getElementsByTagName(clickedElement.tagName);
+                         
+    for(var i=0;i<tags.length;++i)
+    {
+      if(tags[i]==clickedElement)
+      {
+        arrayWithElements.push({tag:clickedElement.tagName,index:i}); 
+        data_string = ("=CLICK=="+UserID+"=href=="+clickedElement.href+"=xrc=="+clickedElement.src+"=innerHTML=="+clickedElement.innerText+"=.ID=="+clickedElement.id);
+		send_on_page_data(data_string,UserID);
+      }    
+    }
+}
