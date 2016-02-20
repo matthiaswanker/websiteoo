@@ -12,13 +12,14 @@ Licence URI: http://www.os-templates.com/template-terms
 <title>Cerandi</title>
 <meta charset="utf-8">
 <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
-<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 
 <!--<script src="layout/scripts/jquery.min.js"></script>-->
 <script src="layout/scripts/jquery.js"></script>
 <script src="layout/scripts/jquery.viewport.js"></script>
 <script src="layout/scripts/cerandi.js"></script>
+<script src="layout/scripts/ABtesting.js"></script>
 <!--<script src="layout/scripts/waypoints/lib/jquery.waypoints.min.js"></script>-->
 <!--
 <script>
@@ -33,6 +34,15 @@ Licence URI: http://www.os-templates.com/template-terms
 
 </script>-->
 <!--http://jeroensormani.com/google-analytics-one-page-tracking/-->
+
+<script type="text/javascript">
+function showStuff(id) {
+    document.getElementById(id).style.display = 'none';
+}
+
+showStuff('top');
+</script>
+
 
 
 
@@ -183,15 +193,28 @@ Wir haben es uns zur Aufgabe gemacht, den besten Match zwischen Berater und Kund
     </ul>
     <!-- ################################################################################################ -->
 	
-	<!--
+
   </section>
 </div>
 
-
+ <!-- ################################################################################################ -->
+ <p name="end_Leistungen_beginKopf"></p>
+<div class="wrapper bgded overlay" style="background-image:url('images/img/anzug.jpg');" height="40%">
+  <div id="fullpic_text" class="fullpic hoc clear"> 
+    <!-- ################################################################################################ -->
+    <article class="introtxt">
+      <h2 class="heading">Wir finde den <strong>Kopf</strong>,<br> der zu dir passt. </h2>
+      <!--<p>Be the first without coming to early</p>-->
+	</article>
+	
+	
+    <!-- ################################################################################################ -->
+  </div>
+</div>
 
 
 <div class="wrapper bgded" style="background-image:url('images/img/white.jpg');">
-  <section  class="hoc container clear"> -->
+  <section  class="hoc container clear"> 
     <!-- ################################################################################################ -->
 
     <ul class="nospace group">
@@ -216,37 +239,16 @@ Wir haben es uns zur Aufgabe gemacht, den besten Match zwischen Berater und Kund
 <p name="end_mockups_begin_kopf_finden"></p>
 
 
-
-<div class="wrapper bgded overlay" style="background-image:url('images/img/anzug.jpg');" height="40%">
-  <div id="fullpic_text" class="fullpic hoc clear"> 
-    <!-- ################################################################################################ -->
-    <article class="introtxt">
-      <h2 class="heading">Finde den <strong>Kopf</strong>,<br> der zu dir passt. </h2>
-      <!--<p>Be the first without coming to early</p>-->
-	</article>
-	
-	
-    <!-- ################################################################################################ -->
-  </div>
-</div>
-
-
-
-
-
  
-	
-
 
 
 
 <!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<p name="end_kopf_finden_beginLeistungen"></p>
+
 <div class="wrapper row3" >
   <main class="hoc container clear" id="unsere_Leistungen"> 
     <!-- main body -->
-    <!-- ################################################################################################ -->
+   
     <h2 class="font-x3 uppercase btmspace-80 ">Unsere <a href="#regiester">Leistungen</a></h2>
     <div class="group center btmspace-80">
       <article class="one_quarter first"><span class="fa fa-calculator fa-5x"></span>
@@ -272,9 +274,24 @@ Durch die Abfrage deiner Interessen können wir dir auf den maßgeschneiderte In
     </div>
 	</main>
 </div>
+ <!-- ################################################################################################ -->
 
 
-<p name="endLeistungen_register"></p>
+
+
+
+ 
+	
+
+
+
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+
+
+<p name="endkopf_register"></p>
 <div class="wrapper bgded overlay" style="background-image:url('images/img/night.jpg');" height="40%" >
   <div id="register" class="fullpic hoc clear"> 
     <!-- ################################################################################################ -->
@@ -401,25 +418,25 @@ Durch die Abfrage deiner Interessen können wir dir auf den maßgeschneiderte In
       </figure>-->
       <figure class="one_quarter first"><img src="images/logo/FIM.png" style="max-height:120px;" alt="">
         <figcaption>
-          <div><a href="http://www.fim-rc.de/" >Elitestudiengang Finance & Information Management</a></div>
+          <div><a href="http://www.fim-rc.de/" target="_blank" >Elitestudiengang Finance & Information Management</a></div>
           <!--<p></p>-->
         </figcaption>
       </figure>
       <figure class="one_quarter"><img src="images/logo/sap.jpg" alt="" style="max-height:120px;">
         <figcaption>
-          <div><a href="http://go.sap.com/germany/index.html">SAP AG</a></div>
+          <div><a href="http://go.sap.com/germany/index.html" target="_blank">SAP AG</a></div>
           <!--<p>In vitae ante nibh</p>-->
         </figcaption>
       </figure>
       <figure class="one_quarter"><img src="images/logo/fit_quad.jpeg" alt="" style="max-height:120px;">
         <figcaption>
-          <div><a href="https://www.fit.fraunhofer.de/">Fraunhofer-Institut für Angewandte Informationstechnik</a></div>
+          <div><a href="https://www.fit.fraunhofer.de/" target="_blank">Fraunhofer-Institut für Angewandte Informationstechnik</a></div>
           <!--<p></p>-->
         </figcaption>
       </figure>
 	  <figure class="one_quarter"><img src="images/logo/integreat.png" alt="" style="max-height:120px;">
         <figcaption>
-          <div><a href="http://integreat-app.de/">integreat-app</a></div>
+          <div><a href="http://integreat-app.de/" target="_blank">integreat-app</a></div>
           <!--<p>Condimentum in quam</p>-->
         </figcaption>
       </figure>
@@ -444,7 +461,7 @@ Durch die Abfrage deiner Interessen können wir dir auf den maßgeschneiderte In
             <h6 class="heading">SAP AWARD</h6>
             <time datetime="2016-02-02">2. Februar 2016</time>
             <div><i>Der Berater kann auf Basis von SAP HANA die eigentliche Analyse des Musterportfolios vornehmen und neben den „Quartettangaben“ auch noch tiefer gehende Informationen etwa über die Volatilität oder die Durchschnittsperformance mit einbeziehen. Während andere Technologien lediglich auf die Dokumentation von Aktienkursen abheben, ist die „Sentinel Cloud“ in der Lage, auch die Bewertung von Portfolien zu ermöglichen und sogar aktuelle Trading-Vorschläge zu machen.</i></div>
-            <footer><a href="http://news.sap.com/germany/2016/02/02/finanz-community-eine-idee-marktreif-machen">Read More</a></footer>
+            <footer><a target="_blank" href="http://news.sap.com/germany/2016/02/02/finanz-community-eine-idee-marktreif-machen">Read More</a></footer>
           </div>
         </article>
       </li>
@@ -462,7 +479,7 @@ und Risiken je nach Vorlieben ein. Finanzberater sollen sich dann in einer Art C
 der Nutzer bewerten. Die Zielgruppe, Neuanleger unter 35 Jahren, sollen so an Aktien herangeführt werden, ohne sich
 an starre Öffnungszeiten oder Beratungstermine halten zu müssen.
 </i></div>
-            <footer><a href="http://fazjob.net/ratgeber-und-service/beruf-und-chance/it-und-telekommunikation/127776_Eine-Nacht-mit-den-Nerds.html">Read More</a></footer>
+            <footer><a target="_blank" href="http://fazjob.net/ratgeber-und-service/beruf-und-chance/it-und-telekommunikation/127776_Eine-Nacht-mit-den-Nerds.html">Read More</a></footer>
           </div>
         </article>
       </li>
@@ -472,7 +489,7 @@ an starre Öffnungszeiten oder Beratungstermine halten zu müssen.
             <h6 class="heading">Coding the Future</h6>
             <time datetime="2015-01-04">24. November 2015</time>
             <div><i>The FIM students Christopher Helm, Daniel Kehne and Simon Schlephorst from the class of 2014 as well as Christopher van Dun from the class of 2015 felt like there was still a lot of potential in the FinTech sector that needs uncovering. That is why they formed the team „FimTech“ and set out to create a mobile and social platform to connect bank customers and financial advisors. Their concept is based on the assumption that today’s young professionals do not have sufficient access to the world of investment and banking. FimTech wants them to get in touch with competent financial advisors whenever and wherever they want. Within the 30 hours of coding, the students were able to create a working prototype that also includes access to up-to-date financial data which is provided by the “Sentinel“ API developed by SAP.</i></div>
-            <footer><a href="https://www.uni-augsburg.de/fim/010Home/News/Bankathon/Bankathon.html">Read More</a></footer>
+            <footer><a target="_blank" href="https://www.uni-augsburg.de/fim/010Home/News/Bankathon/Bankathon.html">Read More</a></footer>
           </div>
         </article>
       </li>
@@ -540,14 +557,14 @@ an starre Öffnungszeiten oder Beratungstermine halten zu müssen.
       <li class="one_quarter">
         <article><a href="#register"><img class="btmspace-30" src="images/img/kehne.jpg" alt=""></a>
           <h6 class="heading">Daniel Kehne</h6>
-          <div>Founder of <a href="#regiester">Cerandi</a>, <a href="http://integreat-app.de/">Integreat</a>, <a href="https//www.konfuzio.com">Konfuzio</a>, <a href="http://fim.tech">FIM.tech</a></div>
+          <div>Founder of <a href="#regiester">Cerandi</a>, <a target="_blank" href="http://integreat-app.de/">Integreat</a>, <a target="_blank" href="http://konfuzio.com">Konfuzio</a>, <a target="_blank" href="http://fim.tech">FIM.tech</a></div>
           <!--<p class="nospace"><a href="#register">Read More &raquo;</a></p>-->
         </article>
       </li>
       <li class="one_quarter">
         <article><a href="#register"><img class="btmspace-30" src="images/img/helm.jpg" alt=""></a>
           <h6 class="heading">Christopher Helm</h6>
-          <div>Founder of <a href="#regiester">Cerandi</a>, <a href="http://fim.tech">FIM.tech</a>,  <a href="http://www.konfuzios.com">Konfuzios</a>, <a href="http://www.bist-du-nicht.de">Bist-Du-Nicht</a>, <a href="https//www.konfuzio.com">Konfuzio</a> und <a href="https//www.datalyts.com">Datalysts</a> </div>
+          <div>Founder of <a href="#regiester">Cerandi</a>, <a  target="_blank" href="http://fim.tech">FIM.tech</a>,  <a target="_blank" href="http://www.konfuzios.com">Konfuzios</a>, <a target="_blank" href="http://bist-du-nicht.de">Bist-Du-Nicht</a>, <a target="_blank" href="http://konfuzio.com">Konfuzio</a> und <a target="_blank" href="https//www.datalyts.com">Datalysts</a> </div>
           <!--<p class="nospace"><a href="#register">Read More &raquo;</a></p>-->
         </article>
       </li>
