@@ -1,6 +1,8 @@
 from django.contrib import admin
 from .models import  Client,Advisor,Bank,Investment,Stock, Message
 
+
+
 # # Register your models here.
 admin.site.register(Client)
 admin.site.register(Advisor)

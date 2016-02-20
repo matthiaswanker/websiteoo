@@ -1,0 +1,128 @@
+/*
+blue: #469FD8
+
+red: #E94358
+
+orange: #F59B29
+
+green: #8DC14F
+*/
+
+
+/*
+* General View
+*/
+
+
+
+body {
+	font-family: Roboto !important;
+	color: #333333 !important;
+}
+
+.visual h1  {
+	color:#333333;
+	font-weight:normal;
+	
+}
+
+.btn {
+	color:#333333;
+	background-color:#ffffff;
+	border-color:#000000;
+}
+
+.btn:hover{
+	background-color:#333333;
+}
+
+#cta{
+	margin-top: 2%;
+}
+
+.text-primary {
+    color: #333333;
+}
+
+
+.visual-list h3 {
+    color: yellow; }
+	
+.subscribe h3 {
+    color: #333333; }
+
+	
+.visual-container h2 {
+	margin-bottom: 1%;
+    color: rgba(255,255,255,0.72);
+}
+
+.testimonials li {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    width: 33.3333%;
+    letter-spacing: 0;
+}
+
+.area {
+    background: rgba(255,255,255,0.72);
+}
+
+/*
+* Desktop View
+*/
+
+.visual-container{
+	background-color:#469FD8;
+}
+
+.plan ul:before {
+    background: rgba(255,255,255,0.72);
+}
+
+#nav {
+  overflow: hidden;
+  text-align: right;
+  font-size: 0;
+  letter-spacing: -4px;
+  white-space: nowrap; }
+  #nav .nav-drop {
+    overflow: hidden; }
+  #nav ul {
+    padding: 9px 0 5px;
+    margin: 0; }
+  #nav li {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.6rem;
+    line-height: 24px;
+    font-weight: bold;
+    letter-spacing: 0;
+    white-space: normal;
+    margin: 0 0 0 34px; }
+    #nav li a {
+      display: block;
+      color: #888888; }
+      #nav li a:hover {
+        text-decoration: none;
+        color: #000000; }
+
+/*
+* Mobil View
+*/
+
+p.tagline {
+	margin-top:10%;
+	color:#333333;
+}
+
+.visual{
+	background: #ffffff;
+}
+
+
+
+
+
