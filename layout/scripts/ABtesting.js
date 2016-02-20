@@ -109,7 +109,7 @@ var ABalytics = (function (window, document, undefined) {
                 gaWrapper.push(experiment, variant.name, slot);
 				var info_string_submit = 'Experiment=='+experiment+'=Variant=='+variant.name;
 				send_on_page_data(info_string_submit,UserID);
-				alert('INFOMATION \n\n Folgende Informationen werden angezeigt: \n\n'+variant.name);
+				/*alert('INFOMATION \n\n Folgende Informationen werden angezeigt: \n\n'+variant.name);*/
 
                 for (change in variant) {
                     if (change !== 'name') {

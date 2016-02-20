@@ -69,7 +69,7 @@ var innerHeight=window.innerHeight;
 var previousURL=document.referrer;
 console.log('Referrer '+document.referrer);
 
-var browserInfo= timeStamp()+'=previousURL=='+previousURL+'yourapp='+yourapp+'userAgent='+userAgent+'appVersion='+appVersion+'appCodeName='+appCodeName+'platform='+platform+'oscpu='+oscpu+'cookieEnabled='+cookieEnabled+'outerWidth='+outerWidth+'outerHeight='+outerHeight+'=innerWidth'+innerWidth+'innerHeight='+innerHeight;
+var browserInfo= timeStamp()+'=previousURL=='+previousURL+'=yourapp=='+yourapp+'userAgent='+userAgent+'appVersion='+appVersion+'appCodeName='+appCodeName+'platform='+platform+'oscpu='+oscpu+'cookieEnabled='+cookieEnabled+'outerWidth='+outerWidth+'outerHeight='+outerHeight+'=innerWidth'+innerWidth+'innerHeight='+innerHeight;
 console.log(browserInfo);
 
 function randomString() {
