@@ -14,8 +14,10 @@
 <script src="layout/scripts/jquery.viewport.js"></script>
 <script src="layout/scripts/cerandi.js"></script>
 <script src="layout/scripts/ABtesting.js"></script>
+
+
 <!--<script src="layout/scripts/waypoints/lib/jquery.waypoints.min.js"></script>-->
-<!--
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -26,23 +28,295 @@
   ga('send', 'pageview');
   
 
-</script>-->
+</script>
 <!--http://jeroensormani.com/google-analytics-one-page-tracking/-->
 
 
+<script>
+var ex_team = 
+			`	
+				<p name="endcomments_beginteam" style="height:0px;margin:0px;padding:0px;"></p>
+				<div class="wrapper row3" > 
+				  <main class="hoc container clear"> 
+					<h2 class="font-x3 uppercase btmspace-80" id="Cerandi_Team">Team <a href="#register">Cerandi</a></h2>
+					<ul class="nospace group">
+					  <!--<li class="one_quarter first">
+						<div class="inspace-30 borderedbox">
+						  <h6 class="heading">Our Team</h6>
+						  <p>Convallis eros lobortis sollicitudin finibus nullam eu tincidunt orci aliquam lobortis id ipsum vehicula pulvinar aenean vulputate tempus ligula ut scelerisque.</p>
+						</div>
+					  </li>-->
+					  <li class="one_quarter first">
+						<article><a href="#register"><img class="btmspace-30" src="images/img/schlephorst.jpg" alt=""></a>
+						  <h6 class="heading">Simon Schlephorst</h6>
+						  <div>Founder of Cerandi</div>
+						  <!--<p class="nospace"><a href="#register">Read More &raquo;</a></p>-->
+						</article>
+					  </li>
+					  <li class="one_quarter">
+						<article><a href="#register"><img class="btmspace-30" src="images/img/vandun.jpg" alt=""></a>
+						  <h6 class="heading">Christopher van Dun</h6>
+						  <div>Founder of Cerandi</div>
+						  <!--<p class="nospace"><a href="#register">Read More &raquo;</a></p>-->
+						</article>
+					  </li>
+					  <li class="one_quarter">
+						<article><a href="#register"><img class="btmspace-30" src="images/img/kehne.jpg" alt=""></a>
+						  <h6 class="heading">Daniel Kehne</h6>
+						  <div>Founder of Cerandi, <a target="_blank" href="http://integreat-app.de/">Integreat</a>, <a target="_blank" href="http://konfuzio.com">Konfuzio</a>, <a target="_blank" href="http://fim.tech">FIM.tech</a></div>
+						  <!--<p class="nospace"><a href="#register">Read More &raquo;</a></p>-->
+						</article>
+					  </li>
+					  <li class="one_quarter">
+						<article><a href="#register"><img class="btmspace-30" src="images/img/helm.jpg" alt=""></a>
+						  <h6 class="heading">Christopher Helm</h6>
+						  <div>Founder of Cerandi, <a  target="_blank" href="http://fim.tech">FIM.tech</a>,  <a target="_blank" href="http://www.konfuzios.com">Konfuzios</a>, <a target="_blank" href="http://bist-du-nicht.de">Bist-Du-Nicht</a>, <a target="_blank" href="http://konfuzio.com">Konfuzio</a> und <a target="_blank" href="https//www.datalyts.com">Datalysts</a> </div>
+						  <!--<p class="nospace"><a href="#register">Read More &raquo;</a></p>-->
+						</article>
+					  </li>
+					</ul>
+				  </main>
+				</div>
+			
+			`;
 
+var ex_comment = 	`
+					<!-- ################################################################################################ -->
+					<p name="begincomments" style="height:0px;margin:0px;padding:0px;"></p>
+					<div class="wrapper bgded overlay" style="background-image:url('images/img/grey.jpg');" >
+					  <section id="testimonials" class="hoc container clear"> 
+						<!-- ################################################################################################ -->
+						<h2 class="font-x3 uppercase btmspace-80 "> Comments about <a href="#register">Cerandi</a> </h2>
+						<ul class="nospace group">
+						  <li class="one_half first"><h3>★★★★★</h3>
+							<blockquote><i>The Elite Graduate Program "Finance and Information Mangement" offers both a scientific and practical education and therefore contributes to an excellent preparation for exceptional careers in business.</i></blockquote>
+							<figure class="clear"><img src="images/img/joe.png" alt="">
+							  <figcaption><strong>Joe Kaeser</strong><br>
+								<em>Chief Executive Officer, Siemens AG</em></figcaption>
+							</figure>
+						  </li>
+						  <li class="one_half"><h3>★★★★★</h3>
+							<blockquote><i>Nach dem Gewinn der SAP-Challenge auf dem Bankathon geht es für das Studententeam FIMtech nun darum, ihre Idee zusammen mit SAP marktreif zu machen. </i></blockquote>
+							<figure class="clear"><img src="images/img/mirko.jpg" alt="">
+							  <figcaption><strong>Mirko Paul</strong><br>
+								<em>Head of Digital Banking Innovation, SAP AG</em></figcaption>
+							</figure>
+						  </li>
+						</ul>
+					  </section>
+					</div>
+					<!-- ################################################################################################ -->
+				
+				`;
+
+var ex_press = 	`
+					<!-- ################################################################################################ -->
+					<p name="beginpresse" style="height:0px;margin:0px;padding:0px;"></p>
+					<div class="wrapper row2" >
+					  <section class="hoc container clear" id="presse"> 
+						<h2 class="font-x3 uppercase btmspace-80 "><a href="#register">Cerandi</a> Presse</h2>
+						<ul class="nospace elements">
+						  <li class="one_third first">
+							<article><a href="#register"><img src="images/img/sap-award.png" alt=""></a>
+							  <div class="txtwrap">
+								<h6 class="heading">SAP AWARD</h6>
+								<time datetime="2016-02-02">2. Februar 2016</time>
+								<div><i>Der Berater kann auf Basis von SAP HANA die eigentliche Analyse des Musterportfolios vornehmen und neben den „Quartettangaben“ auch noch tiefer gehende Informationen etwa über die Volatilität oder die Durchschnittsperformance mit einbeziehen. Während andere Technologien lediglich auf die Dokumentation von Aktienkursen abheben, ist die „Sentinel Cloud“ in der Lage, auch die Bewertung von Portfolien zu ermöglichen und sogar aktuelle Trading-Vorschläge zu machen.</i></div>
+								<footer><a target="_blank" href="http://news.sap.com/germany/2016/02/02/finanz-community-eine-idee-marktreif-machen">Read More</a></footer>
+							  </div>
+							</article>
+						  </li>
+						  <li class="one_third">
+							<article><a href="#register"><img src="images/logo/fazjob.jpg" alt=""></a>
+							  <div class="txtwrap">
+								<h6 class="heading">Eine Nacht mit den Nerds</h6>
+								<time datetime="2016-11-20">20.11.2016</time>
+								<div><i> Sie funktioniert ein bisschen wie die Dating-App Tinder, nur für
+									Investments. Die Nutzer wählen vorher aus, was für Anlegertypen sie sind, ob sie für die Schulbildung ihrer Kinder sparen
+									oder nur kurzfristig für ein neues Auto. Ob sie risikoscheu sind, oder vor allem schnelles Geld verdienen wollen. Über eine
+									Programmier-Schnittstelle holen sich die Entwickler Daten über verschiedene Aktien, wie bei Tinder kann man nun nach
+									rechts oder links wischen, um zu entscheiden, ob man lieber BMW oder VW haben will. Ein Punktesystem ordnet die Chancen
+									und Risiken je nach Vorlieben ein. Finanzberater sollen sich dann in einer Art Chat zuschalten können und das Portfolio
+									der Nutzer bewerten. Die Zielgruppe, Neuanleger unter 35 Jahren, sollen so an Aktien herangeführt werden, ohne sich
+									an starre Öffnungszeiten oder Beratungstermine halten zu müssen.
+									</i></div>
+								<footer><a target="_blank" href="http://fazjob.net/ratgeber-und-service/beruf-und-chance/it-und-telekommunikation/127776_Eine-Nacht-mit-den-Nerds.html">Read More</a></footer>
+							  </div>
+							</article>
+						  </li>
+						  <li class="one_third">
+							<article><a href="#register"><img src="images/logo/tum.jpg" alt=""></a>
+							  <div class="txtwrap">
+								<h6 class="heading">Coding the Future</h6>
+								<time datetime="2015-01-04">24. November 2015</time>
+								<div><i>The FIM students Christopher Helm, Daniel Kehne and Simon Schlephorst from the class of 2014 as well as Christopher van Dun from the class of 2015 felt like there was still a lot of potential in the FinTech sector that needs uncovering. That is why they formed the team „FimTech“ and set out to create a mobile and social platform to connect bank customers and financial advisors. Their concept is based on the assumption that today’s young professionals do not have sufficient access to the world of investment and banking. FimTech wants them to get in touch with competent financial advisors whenever and wherever they want. Within the 30 hours of coding, the students were able to create a working prototype that also includes access to up-to-date financial data which is provided by the “Sentinel“ API developed by SAP.</i></div>
+								<footer><a target="_blank" href="https://www.uni-augsburg.de/fim/010Home/News/Bankathon/Bankathon.html">Read More</a></footer>
+							  </div>
+							</article>
+						  </li>
+						</ul>
+					  </section>
+					</div>
+					<!-- ################################################################################################ -->
+
+				`;
+
+var ex_logos =  `
+					<!-- ################################################################################################ -->
+					<p name="header_begin_partner_logos" style="height:0px;margin:0px;padding:0px;"></p>
+					<div class="wrapper row0" >
+					  <div id="topbar" class="hoc clear" > 
+							<div class="fl_left">
+								<img src="images/img/logos.png"></img>
+							</div>
+						</div>
+					</div>
+					<!-- ################################################################################################ -->
+				`;
+				
+var ex_partners = 	`
+						<!-- ################################################################################################ -->
+						<p name="beginpartners" style="height:0px;margin:0px;padding:0px;"></p>
+						<div class="wrapper bgded " style="background-image:url('images/img/white.png');" >
+						  <section class="hoc container clear">
+							<h2 class="font-x3 uppercase btmspace-80 " id="Partner">Cerandi <a href="#">Partners</a></h2>
+							<div class="group center btmspace-50">
+							  <!--<figure class="one_quarter first"><img src="images/logo/elite.gif" style="max-height:120px;" alt="">
+								<figcaption>
+								  <p><a href="#register">Integer</a></p>
+								  <p>Sed odio interdum et</p>
+								</figcaption>
+							  </figure>-->
+							  <a href="http://www.fim-rc.de/" target="_blank" >
+							  <figure class="one_quarter first"><img src="images/logo/FIM.png" style="max-height:120px;" alt="" ></figure>
+							  </a>
+							  <!--
+								<figcaption>
+								  <div>Elitestudiengang Finance & Information Management</div>
+								</figcaption>-->
+							  
+							  <a href="http://go.sap.com/germany/index.html" target="_blank">
+								<figure class="one_quarter"><img src="images/logo/sap.jpg" alt="" style="max-height:120px;"></figure>
+							  </a>
+							  
+							  <a href="https://www.fit.fraunhofer.de/" target="_blank">
+								<figure class="one_quarter"><img src="images/logo/fit_quad.jpeg" alt="" style="max-height:120px;"></figure>
+							  </a>
+								
+							  <a href="http://integreat-app.de/" target="_blank">
+								<figure class="one_quarter"><img src="images/logo/integreat.png" alt="" style="max-height:120px;"></figure>
+							  </a>
+								
+							  
+							</div>
+						  </section>
+						</div>
+						<!-- ################################################################################################ -->
+					`;
+
+
+ABalytics.init({
+              experiment1_name: [
+                {
+                  name: 'team_yes_press_yes_partners_yes',
+                  "ex1_team": ex_team,
+				  
+                  "ex1_press": ex_press,
+				  "ex1_comment": ex_comment,
+				  
+				  "ex1_logos": ex_logos,
+				  "ex1_partner": ex_partners
+                },
+               {
+                  name: 'team_no_press_yes_partners_yes',
+                  "ex1_team": '',
+				  
+                  "ex1_press": ex_press,
+				  "ex1_comment": ex_comment,
+				  
+				  "ex1_logos": ex_logos,
+				  "ex1_partner": ex_partners
+                },
+				{
+                  name: 'team_no_press_no_partners_yes',
+                  "ex1_team": '',
+				  
+                  "ex1_press": '',
+				  "ex1_comment": '',
+				  
+				  "ex1_logos": ex_logos,
+				  "ex1_partner": ex_partners
+                },
+				{
+                  name: 'team_no_press_yes_partners_yes',
+                  "ex1_team": '',
+				  
+                  "ex1_press": ex_press,
+				  "ex1_comment": ex_comment,
+				  
+				  "ex1_logos": '',
+				  "ex1_partner": ''
+                },
+				{
+                  name: 'team_no_press_yes_partners_yes',
+                  "ex1_team": ex_team,
+				  
+                  "ex1_press": '',
+				  "ex1_comment": '',
+				  
+				  "ex1_logos": '',
+				  "ex1_partner": ''
+                },
+				{
+                  name: 'team_no_press_no_partners_no',
+                  "ex1_team": '',
+				  
+                  "ex1_press": '',
+				  "ex1_comment": '',
+				  
+				  "ex1_logos": '',
+				  "ex1_partner": ''
+                },
+				{
+                  name: 'team_yes_press_no_partners_yes',
+                  "ex1_team": ex_team,
+				  
+                  "ex1_press": '',
+				  "ex1_comment": '',
+				  
+				  "ex1_logos": ex_logos,
+				  "ex1_partner": ex_partners
+                },
+				{
+                  name: 'team_yes_press_yes_partners_no',
+                  "ex1_team": ex_team,
+				  
+                  "ex1_press": ex_press,
+				  "ex1_comment": ex_comment,
+				  
+				  "ex1_logos": '',
+				  "ex1_partner": ''
+                },
+				
+              ]
+            });
+
+</script>
 
 
 </head>
 <body id="top">
+
+
 <!-- ################################################################################################ -->
 <div class="wrapper row1">
   <header id="header"  class="hoc clear"> 
-    <!-- ################################################################################################ -->
+    <!-- ################################ -->
     <div id="logo" class="fl_left">
       <h1><a href="index.html">Cerandi</a></h1>
     </div>
-    <!-- ################################################################################################ -->
+    <!-- ################################### -->
+	
     <nav id="mainav" name="nav" class="fl_right">
       <ul class="clear">
 		<!--
@@ -74,11 +348,11 @@
         <!--<li><a href="#">Cera <i class="fa fa-heart-o"></i> Andi</a></li>-->
 		<li><a href="#topbar">App</a></li>
 		<li><a href="#unsere_Leistungen">Leistungen</a></li>
-		<li><a href="#Partner">Partner</a></li>
+		<!--<li><a href="#Partner">Partner</a></li>-->
 		<li><a href="#register">Registrieren</a></li>
 		<li><a href="#Angebote">Angebote</a></li>
-		<li><a href="#presse">Presse</a></li>
-		<li><a href="#Cerandi_Team">Team</a></li>
+		<!--<li><a href="#presse">Presse</a></li>-->
+		<!--<li><a href="#Cerandi_Team">Team</a></li>-->
       </ul>
     </nav>
     <!-- ################################################################################################ -->
@@ -89,7 +363,7 @@
 
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<p name="header_pic"></p>
+<p name="header_pic" style="height:0px;margin:0px;padding:0px;"></p>
 <div class="wrapper bgded overlay" style="background-image:url('images/img/glasses.png');">
   <div id="pageintro" class="hoc clear"> 
     <!-- ################################################################################################ -->
@@ -109,54 +383,24 @@
   </div>
 
 </div>
-<p name="endheader_pic_begin_partner_logos"></p>
 
-<div class="wrapper row0" >
-  <div id="topbar" class="hoc clear" > 
-    <!-- ################################################################################################ -->
-    <div class="fl_left">
-		<img src="images/img/logos.png"></img>
-	<!--
-      <ul class="faico clear">
-        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-        <li><a class="faicon-pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
-        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
-        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-        <li><a class="faicon-rss" href="#"><i class="fa fa-rss"></i></a></li>
-      </ul>
-    </div>
-	-->
-	<!--
-    <div class="fl_right">
-      <ul class="nospace inline pushright">
-        <li><i class="fa fa-phone"></i> +49 (163) 431 4960</li>
-        <li><i class="fa fa-envelope-o"></i> info@cerandi.com</li>
-      </ul>
-    </div>-->
-    <!-- ################################################################################################ -->
-  </div>
-</div>
+
+					
+
+<!-- #################################		Partners		############################################### -->
+<div class="ex1_logos" style="background:white;">		</div>
+<!-- ################################################################################################ -->
+
+
 
 
 
 <!-- ################################################################################################ -->
+<p name="begin_mockups" style="height:0px;margin:0px;padding:0px;"></p>
 
-<!-- ################################################################################################ -->
-
-
-<!-- ################################################################################################ -->
-
-
-<!--<video class=" lp-data-col__phone-hand video--push lazyloaded" loop="" autoplay="" preload="auto" data-poster="https://number26.de/wp-content/themes/number26/dist/img/features/push-500-poster-ret.png" data-video-src="https://number26.de/wp-content/themes/number26/dist/video/push-500.mp4" src="https://number26.de/wp-content/themes/number26/dist/video/push-500.mp4" poster="https://number26.de/wp-content/themes/number26/dist/img/features/push-500-poster-ret.png"></video>-->
-
-
-<p name="end_partner_logos_begin_mockups"></p>
-
-<div class="wrapper bgded" style="background-image:url('images/img/white.jpg');" >
+<div class="wrapper bgded" style="background-color:white;" >
   <section  class="hoc container clear"> 
-    <!-- ################################################################################################ -->
+    
     <!--<h2 class="font-x3 uppercase btmspace-80 ">Individuell wie <a href="#register">Du</a> </h2>-->
     <ul class="nospace group">
       <li class="one_half first">
@@ -172,14 +416,17 @@ Wir haben es uns zur Aufgabe gemacht, den besten Match zwischen Berater und Kund
        
       </li>
     </ul>
-    <!-- ################################################################################################ -->
+   
 	
 
   </section>
 </div>
-
  <!-- ################################################################################################ -->
- <p name="end_Leistungen_beginKopf"></p>
+ 
+ 
+ 
+ <!-- ################################################################################################ -->
+ <p name="beginKopffinden" style="height:0px;margin:0px;padding:0px;"></p>
 <div class="wrapper bgded overlay" style="background-image:url('images/img/anzug.jpg');" height="40%">
   <div id="fullpic_text" class="fullpic hoc clear"> 
     <!-- ################################################################################################ -->
@@ -219,7 +466,7 @@ Wir haben es uns zur Aufgabe gemacht, den besten Match zwischen Berater und Kund
   </section>
 </div>
 -->
-<p name="end_mockups_begin_kopf_finden"></p>
+
 
 
  
@@ -227,7 +474,7 @@ Wir haben es uns zur Aufgabe gemacht, den besten Match zwischen Berater und Kund
 
 
 <!-- ################################################################################################ -->
-
+<p name="begin_unsere_Leistungen" style="height:0px;margin:0px;padding:0px;"></p>
 <div class="wrapper row3" >
   <main class="hoc container clear" id="unsere_Leistungen"> 
     <!-- main body -->
@@ -287,14 +534,9 @@ Durch die Abfrage deiner Interessen können wir dir auf den maßgeschneiderte In
 
 
 <!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-
-
-
-<p name="endkopf_register"></p>
+<p name="begin_register" style="height:0px;margin:0px;padding:0px;"></p>
 <div class="wrapper bgded overlay" style="background-image:url('images/img/night.jpg');" height="40%" >
   <div id="register" class="fullpic hoc clear"> 
-    <!-- ################################################################################################ -->
     <article class="introtxt">
       <h2 class="heading">Melde <strong>dich</strong> an</h2>
       <!--<p>Be the first without coming to early</p>-->
@@ -340,17 +582,16 @@ Durch die Abfrage deiner Interessen können wir dir auf den maßgeschneiderte In
 	</ul>
 	</form>
 	
-    <!-- ################################################################################################ -->
+    
   </div>
 </div>
+<!-- ################################################################################################ -->
 
-<p name="endregister_beginAngebote"></p>
-
+<!-- ################################################################################################ -->
+<p name="beginAngebotePersonengruppen" style="height:0px;margin:0px;padding:0px;"></p>
 <div class="wrapper row3" id="Angebote" >
   <main class="hoc container clear"> 
-	
     <ul class="nospace group">
-	
       <li class="one_quarter first">
         <div class="inspace-30 borderedbox">
           <h6 class="heading">Gemeinsam arbeiten</h6>
@@ -380,200 +621,53 @@ Durch die Abfrage deiner Interessen können wir dir auf den maßgeschneiderte In
       </li>
       
     </ul>
-    <!-- ################################################################################################ -->
-    <!-- / main body -->
     <div class="clear"></div>
   </main>
 </div>
 <!-- ################################################################################################ -->
+
+
 <!-- ################################################################################################ -->
-<p name="endAngebote_beginhire"></p>
+<p name="beginhire" style="height:0px;margin:0px;padding:0px;"></p>
 <div class="wrapper bgded overlay" style="background-image:url('images/img/paar_breit.jpg');" height="40%" >
   <div id="fullpic_text" class="fullpic hoc clear"> 
-    <!-- ################################################################################################ -->
     <article class="introtxt" style="margin-top:20%;">
       <h2 class="heading">Wir suchen <strong>DICH</strong></h2>
       <div>Unsere Kreativität sprudelt so wie unsere Kaffeemaschine. Verdiene bei uns das Geld, dass du später anlegen kannst. Wir investieren gerne in dich.</div>
 	</article>
-	
-	
-    <!-- ################################################################################################ -->
   </div>
 </div>
+<!-- ################################################################################################ -->
+
+
+<!-- #################################		Partners		############################################### -->
+<div class="ex1_partner">		</div>
+<!-- ################################################################################################ -->
+
+
+
+<!-- #################################		Press		############################################### -->
+<div class="ex1_press">		</div>
+<!-- ################################################################################################ -->
+
+
+
+<!-- #################################		Comments		############################################### -->
+<div class="ex1_comment">		</div>
+<!-- ################################################################################################ -->
+
+
+
+
+
+<!-- #################################		TEAM		############################################### -->
+<div class="ex1_team">		</div>
+<!-- ################################################################################################ -->
 
 
 
 <!-- ################################################################################################ -->
-<p name="endhire_beginpartners"></p>
-<div class="wrapper bgded " style="background-image:url('images/img/white.png');" >
-  <section class="hoc container clear"> 
-    <!-- ################################################################################################ -->
-    <h2 class="font-x3 uppercase btmspace-80 " id="Partner">Cerandi <a href="#">Partners</a></h2>
-    <div class="group center btmspace-50">
-      <!--<figure class="one_quarter first"><img src="images/logo/elite.gif" style="max-height:120px;" alt="">
-        <figcaption>
-          <p><a href="#register">Integer</a></p>
-          <p>Sed odio interdum et</p>
-        </figcaption>
-      </figure>-->
-	  <a href="http://www.fim-rc.de/" target="_blank" >
-      <figure class="one_quarter first"><img src="images/logo/FIM.png" style="max-height:120px;" alt="" ></figure>
-	  </a>
-	  <!--
-        <figcaption>
-          <div>Elitestudiengang Finance & Information Management</div>
-        </figcaption>-->
-      </figure>
-	  <a href="http://go.sap.com/germany/index.html" target="_blank">
-		<figure class="one_quarter"><img src="images/logo/sap.jpg" alt="" style="max-height:120px;"></figure>
-      </a>
-	  
-      <a href="https://www.fit.fraunhofer.de/" target="_blank">
-		<figure class="one_quarter"><img src="images/logo/fit_quad.jpeg" alt="" style="max-height:120px;"></figure>
-      </a>
-		
-      <a href="http://integreat-app.de/" target="_blank">
-		<figure class="one_quarter"><img src="images/logo/integreat.png" alt="" style="max-height:120px;"></figure>
-	  </a>
-        
-      
-    </div>
-    <!--<p><a class="btn medium" href="#register">Register For Free</a></p>-->
-    <!-- ################################################################################################ -->
-  </section>
-</div>
-
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<p name="endpartners_beginpresse"></p>
-<div class="wrapper row2" >
-  <section class="hoc container clear" id="presse"> 
-    <!-- ################################################################################################ -->
-    <h2 class="font-x3 uppercase btmspace-80 "><a href="#register">Cerandi</a> Presse</h2>
-    <ul class="nospace elements">
-      <li class="one_third first">
-        <article><a href="#register"><img src="images/img/sap-award.png" alt=""></a>
-          <div class="txtwrap">
-            <h6 class="heading">SAP AWARD</h6>
-            <time datetime="2016-02-02">2. Februar 2016</time>
-            <div><i>Der Berater kann auf Basis von SAP HANA die eigentliche Analyse des Musterportfolios vornehmen und neben den „Quartettangaben“ auch noch tiefer gehende Informationen etwa über die Volatilität oder die Durchschnittsperformance mit einbeziehen. Während andere Technologien lediglich auf die Dokumentation von Aktienkursen abheben, ist die „Sentinel Cloud“ in der Lage, auch die Bewertung von Portfolien zu ermöglichen und sogar aktuelle Trading-Vorschläge zu machen.</i></div>
-            <footer><a target="_blank" href="http://news.sap.com/germany/2016/02/02/finanz-community-eine-idee-marktreif-machen">Read More</a></footer>
-          </div>
-        </article>
-      </li>
-      <li class="one_third">
-        <article><a href="#register"><img src="images/logo/fazjob.jpg" alt=""></a>
-          <div class="txtwrap">
-            <h6 class="heading">Eine Nacht mit den Nerds</h6>
-            <time datetime="2016-11-20">20.11.2016</time>
-            <div><i> Sie funktioniert ein bisschen wie die Dating-App Tinder, nur für
-Investments. Die Nutzer wählen vorher aus, was für Anlegertypen sie sind, ob sie für die Schulbildung ihrer Kinder sparen
-oder nur kurzfristig für ein neues Auto. Ob sie risikoscheu sind, oder vor allem schnelles Geld verdienen wollen. Über eine
-Programmier-Schnittstelle holen sich die Entwickler Daten über verschiedene Aktien, wie bei Tinder kann man nun nach
-rechts oder links wischen, um zu entscheiden, ob man lieber BMW oder VW haben will. Ein Punktesystem ordnet die Chancen
-und Risiken je nach Vorlieben ein. Finanzberater sollen sich dann in einer Art Chat zuschalten können und das Portfolio
-der Nutzer bewerten. Die Zielgruppe, Neuanleger unter 35 Jahren, sollen so an Aktien herangeführt werden, ohne sich
-an starre Öffnungszeiten oder Beratungstermine halten zu müssen.
-</i></div>
-            <footer><a target="_blank" href="http://fazjob.net/ratgeber-und-service/beruf-und-chance/it-und-telekommunikation/127776_Eine-Nacht-mit-den-Nerds.html">Read More</a></footer>
-          </div>
-        </article>
-      </li>
-      <li class="one_third">
-        <article><a href="#register"><img src="images/logo/tum.jpg" alt=""></a>
-          <div class="txtwrap">
-            <h6 class="heading">Coding the Future</h6>
-            <time datetime="2015-01-04">24. November 2015</time>
-            <div><i>The FIM students Christopher Helm, Daniel Kehne and Simon Schlephorst from the class of 2014 as well as Christopher van Dun from the class of 2015 felt like there was still a lot of potential in the FinTech sector that needs uncovering. That is why they formed the team „FimTech“ and set out to create a mobile and social platform to connect bank customers and financial advisors. Their concept is based on the assumption that today’s young professionals do not have sufficient access to the world of investment and banking. FimTech wants them to get in touch with competent financial advisors whenever and wherever they want. Within the 30 hours of coding, the students were able to create a working prototype that also includes access to up-to-date financial data which is provided by the “Sentinel“ API developed by SAP.</i></div>
-            <footer><a target="_blank" href="https://www.uni-augsburg.de/fim/010Home/News/Bankathon/Bankathon.html">Read More</a></footer>
-          </div>
-        </article>
-      </li>
-    </ul>
-    <!-- ################################################################################################ -->
-  </section>
-</div>
-
-<!-- ################################################################################################ -->
-
-
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<p name="endpresse_begincomments"></p>
-<div class="wrapper bgded overlay" style="background-image:url('images/img/grey.jpg');" >
-  <section id="testimonials" class="hoc container clear"> 
-    <!-- ################################################################################################ -->
-    <h2 class="font-x3 uppercase btmspace-80 "> Comments about <a href="#register">Cerandi</a> </h2>
-    <ul class="nospace group">
-      <li class="one_half first"><h3>★★★★★</h3>
-        <blockquote><i>The Elite Graduate Program "Finance and Information Mangement" offers both a scientific and practical education and therefore contributes to an excellent preparation for exceptional careers in business.</i></blockquote>
-        <figure class="clear"><img src="images/img/joe.png" alt="">
-          <figcaption><strong>Joe Kaeser</strong><br>
-            <em>Chief Executive Officer, Siemens AG</em></figcaption>
-        </figure>
-      </li>
-      <li class="one_half"><h3>★★★★★</h3>
-        <blockquote><i>Nach dem Gewinn der SAP-Challenge auf dem Bankathon geht es für das Studententeam FIMtech nun darum, ihre Idee zusammen mit SAP marktreif zu machen. </i></blockquote>
-        <figure class="clear"><img src="images/img/mirko.jpg" alt="">
-          <figcaption><strong>Mirko Paul</strong><br>
-            <em>Head of Digital Banking Innovation, SAP AG</em></figcaption>
-        </figure>
-      </li>
-    </ul>
-    <!-- ################################################################################################ -->
-  </section>
-</div>
-<!-- ################################################################################################ -->
-
-<p name="endcomments_beginteam"></p>
-<div class="wrapper row3" >
-  <main class="hoc container clear"> 
-	<h2 class="font-x3 uppercase btmspace-80" id="Cerandi_Team">Team <a href="#register">Cerandi</a></h2>
-    <ul class="nospace group">
-      <!--<li class="one_quarter first">
-        <div class="inspace-30 borderedbox">
-          <h6 class="heading">Our Team</h6>
-          <p>Convallis eros lobortis sollicitudin finibus nullam eu tincidunt orci aliquam lobortis id ipsum vehicula pulvinar aenean vulputate tempus ligula ut scelerisque.</p>
-        </div>
-      </li>-->
-	  <li class="one_quarter first">
-        <article><a href="#register"><img class="btmspace-30" src="images/img/schlephorst.jpg" alt=""></a>
-          <h6 class="heading">Simon Schlephorst</h6>
-          <div>Founder of Cerandi</div>
-          <!--<p class="nospace"><a href="#register">Read More &raquo;</a></p>-->
-        </article>
-      </li>
-      <li class="one_quarter">
-        <article><a href="#register"><img class="btmspace-30" src="images/img/vandun.jpg" alt=""></a>
-          <h6 class="heading">Christopher van Dun</h6>
-          <div>Founder of Cerandi</div>
-          <!--<p class="nospace"><a href="#register">Read More &raquo;</a></p>-->
-        </article>
-      </li>
-      <li class="one_quarter">
-        <article><a href="#register"><img class="btmspace-30" src="images/img/kehne.jpg" alt=""></a>
-          <h6 class="heading">Daniel Kehne</h6>
-          <div>Founder of Cerandi, <a target="_blank" href="http://integreat-app.de/">Integreat</a>, <a target="_blank" href="http://konfuzio.com">Konfuzio</a>, <a target="_blank" href="http://fim.tech">FIM.tech</a></div>
-          <!--<p class="nospace"><a href="#register">Read More &raquo;</a></p>-->
-        </article>
-      </li>
-      <li class="one_quarter">
-        <article><a href="#register"><img class="btmspace-30" src="images/img/helm.jpg" alt=""></a>
-          <h6 class="heading">Christopher Helm</h6>
-          <div>Founder of Cerandi, <a  target="_blank" href="http://fim.tech">FIM.tech</a>,  <a target="_blank" href="http://www.konfuzios.com">Konfuzios</a>, <a target="_blank" href="http://bist-du-nicht.de">Bist-Du-Nicht</a>, <a target="_blank" href="http://konfuzio.com">Konfuzio</a> und <a target="_blank" href="https//www.datalyts.com">Datalysts</a> </div>
-          <!--<p class="nospace"><a href="#register">Read More &raquo;</a></p>-->
-        </article>
-      </li>
-    </ul>
-    <!-- ################################################################################################ -->
-    <!-- / main body -->
-    <div class="clear"></div>
-  </main>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<p name="endteam_beginfooter"></p>
+<p name="beginfooter" style="height:0px;margin:0px;padding:0px;"></p>
 <div class="wrapper row4" >
   <footer id="footer" class="hoc clear"> 
     <!-- ################################################################################################ -->
@@ -648,4 +742,7 @@ Author URI: http://www.os-templates.com/
 Licence: Free to use under our free template licence terms
 Licence URI: http://www.os-templates.com/template-terms
 -->
+
+
+
 </html>

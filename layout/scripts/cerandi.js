@@ -166,7 +166,11 @@ function userLogin(UserID,activity){
 
 }
 
-window.onload=userLogin(UserID,'LOGIN');
+
+ window.onload = function() {
+    ABalytics.applyHtml();
+	userLogin(UserID,'LOGIN');
+  };
 /*window.onbeforeunload = userLogin(UserID,'LOGOUT');*/
 
 window.onbeforeunload = function() {
@@ -185,7 +189,7 @@ window.onbeforeunload = function() {
 function send_on_page_data(data_string,UserID){
 		$.ajax({
 
-			url: 'https://docs.google.com/forms/d/1whl1IOSDleIyuvjVrlaLgK6FsxRrJTvKjZCpNe14JVw/formResponse?ifq&submit=Submit&entry.443734122='+timeStamp()+'='+data_string,
+			url: 'https://docs.google.com/forms/d/1whl1IOSDleIyuvjVrlaLgK6FsxRrJTvKjZCpNe14JVw/formResponse?ifq&submit=Submit&entry.443734122='+timeStamp()+'=UserID=='+UserID+'='+data_string,
 			type: 'POST',
 			data:{ajaxid:4,UserID: UserID},
 			crossDomain: true,
